@@ -1,0 +1,222 @@
+// MapHacks use KeyValues syntax
+"MapHack"
+{
+	// Test include
+	"includes"
+	{
+		"file"	"maps/maphacks/include/rand.txt"
+	}
+
+	// Test precache
+	"precache"
+	{
+		"sound"	"Pain.FemaleDefault"
+	}
+
+	// Test variables
+	"vars"
+	{
+		"iTest" { "type" "int" "value" "42" }
+		"flTest" { "type" "float" "value" "42.123456" }
+		"clrTest" { "type" "color" "value" "255 255 255" }
+		"iDefault" { "type" "int" }
+		"flDefault" { "type" "float" }
+		"clrDefault" { "type" "color" }
+		
+		// For rand test
+		"randMin" { "type" "int" "value" "0" }
+		"randMax" { "type" "int" "value" "100" }
+		
+		// For timed test
+		"timedEventTriggered" { "type" "int" "value" "0" }
+		
+		// For recursive test
+		"recursion" { "type" "int" "value" "0" }
+		
+		// For $getpos & $getang test
+		"vecPos" { "type" "string" }
+		"vecAng" { "type" "string" }
+	}
+
+	// Test events
+	"events"
+	{
+		// MAPHACK_EVENT_TRIGGER
+		"EventTrigger"
+		{
+			"type"	"EVENT_TRIGGER"
+		}
+		
+		// MAPHACK_EVENT_TIMED
+		"EventTimed"
+		{
+			"type"	"EVENT_TIMED"
+			"delay"	"2.0"
+			"repeat"	"1"
+			"startDisabled"	"1"
+		}
+		
+		// MAPHACK_EVENT_OUTPUT
+		"EventOutput"
+		{
+			"type"	"EVENT_OUTPUT"
+			"targetname"	"test_melon"
+			"output"	"OnAwakened"
+		}
+		
+		// MAPHACK_EVENT_GAMEEVENT
+		"EventGameEvent"
+		{
+			"type"	"EVENT_GAMEEVENT"
+			"eventname"	"player_spawn"
+		}
+		
+		// You can't name events using reserved keynames!
+		"entities"
+		{
+			"type"	"EVENT_TRIGGER"
+		}
+	}
+
+	// Test main entities field, run on load
+	"entities"
+	{
+		// Spawn a test melon somewhere
+		"prop_physics"
+		{
+			"targetname"	"test_melon"
+			"origin"	"0 0 0"
+			"angles"	"0 0 0"
+			"keyvalues"
+			{
+				"model"			"models/props_junk/watermelon01.mdl"
+				"rendercolor"	"%clrTest" // '%' = reference a MapHacks variable
+			}
+		}
+
+		// Check for variable condition
+		$if
+		{
+			"cond" "iTest == 42"
+			"entities"
+			{
+				$console { "warning" "$if test passed" }
+			}
+		}
+		
+		// Set variable
+		$set { "var" "iTest" "value" "2" }
+		
+		// Increment variable
+		$increment { "var" "iTest" }
+		
+		// Decrement variable
+		$decrement { "var" "iTest" }
+		
+		// Set a variable to a random value (also test maphack var ref)
+		$rand { "var" "iTest" "rand_min" "%randMin" "rand_max" "%randMax" }
+		
+		// Send a command to console, or debug spew
+		$console { "cmd" "echo cmd" }
+		$console { "msg" "$console msg" }
+		$console { "msg" "$console warning" }
+		
+		// Fire an input
+		$fire { "targetname"	"test_melon" "input" "Sleep" }
+		$fire { "targetname"	"test_melon" "input" "Wake" }
+		
+		// Set KeyValues for existing entity
+		$edit
+		{
+			"targetname"	"test_melon"
+			"keyvalues"
+			{
+				"modelscale"		"4.0"
+			}
+		}
+		
+		// Set KeyValues for ALL existing entities
+		$edit_all
+		{
+			"classname"	"prop_physics"
+			"keyvalues"
+			{
+				"modelscale"		"4.0"
+			}
+		}
+		
+		// Edit entity datadesc fields
+		$edit_field
+		{
+			"targetname"	"test_melon"
+			"fieldname"	"m_clrRender"
+			"value"	"123 123 123"
+		}
+		
+		// Get entity origin & angles, assigns it to variables
+		$getpos { "targetname" "test_melon" "var" "vecPos"}
+		$getang { "targetname" "test_melon" "var" "vecAng"}
+		
+		// Set entity origin & angles
+		$setpos { "targetname" "test_melon" "value" "%vecPos"}
+		$setang { "targetname" "test_melon" "value" "%vecAng"}
+		
+		// Trigger a MapHack event
+		$trigger { "event" "EventTrigger" }
+		
+		// Start a timed MapHack event (stops in EventTimed)
+		$start { "event" "EventTimed" }
+		
+		// Remove an entity
+		$remove { "targetname" "test_melon" }
+		
+		// Remove all named entities
+		$remove_all { "classname" "prop_physics" }
+		
+		// Emits a sound
+		$playsound { "name" "Pain.FemaleDefault" }
+	}
+
+	// Events go here
+	"entities:EventTrigger" // Can specify a label type with a prefix...
+	{
+		$console { "msg" "EventTrigger" }
+		$trigger { "event" "EventUnregistered" }
+	}
+
+	"EventTimed" // ...or have none (defaults to entities field)
+	{
+		$console { "msg" "%timedEventTriggered" }
+		$increment { "var" "timedEventTriggered" }
+		$if { "cond" "timedEventTriggered == 5"
+			"entities"
+			{
+				// Stop a timed MapHack event
+				$console { "msg" "EventTimed: Stop" }
+				$stop { "event" "EventTimed" }
+			}
+		}
+	}
+
+	"EventOutput"
+	{
+		$console { "msg" "EventOutput" }
+	}
+
+	"EventGameEvent"
+	{
+		$console { "msg" "EventGameEvent" }
+	}
+
+	"EventUnregistered" // MapHack allows unregistered events, uses default properties (trigger)
+	{
+		$console { "msg" "EventUnregistered" }
+	}
+	
+	"EventRecursiveTest" // We got a safety net for this, don't go too far
+	{
+		$console { "msg" "%recursion" }
+		$increment { "var" "recursion" }
+		$trigger { "event" "EventRecursiveTest" }
+	}
+}

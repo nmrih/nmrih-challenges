@@ -1,0 +1,60 @@
+// 24: objStart - Break out of the attic.
+// 21: ObjA - Find keys to unlock door.
+// 23: ObjB - Break planks to proceed.
+// 25: ObjC - Family is the answer, Find the secret book.
+// 26: ObjD - Release stair gate.
+// 30: ObjE - Blast through cabin wall
+// 28: ObjF - Enter the book into the shelf.
+// 27: ObjG - Weld through the kitchen door
+// 32: ObjH - Reconnect the telegraph line
+// 33: ObjI - Find Car battery, power up the generator and call for help! [Evac]
+// 40: ObjG2 - Proceed through the underground
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	"nmo_cabin_challenge_1"
+	{
+		"Name"	"Cabin Fever"
+		"Objectives"
+		{
+			"0"	"21"
+			"1"	"26"
+			"2"	"30"
+			"3"	"27"
+			"4"	"32"
+			"5"	"33"
+		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_cabin_challenge_1.txt"
+			}
+		}
+	}
+	
+	"nmo_cabin_challenge_2"
+	{
+		"Name"	"Under the Cabin"
+		"Objectives"
+		{
+			"0"	"24"
+			"1"	"23"
+			"2"	"26"
+			"3"	"30"
+			"4"	"40"
+			"5"	"33"
+		}
+		
+		//"MapHack"
+		//{
+			//"includes"
+			//{
+				//"file"	"maps/maphacks/challenges/nmo_cabin_challenge_2.txt"
+			//}
+		//}
+	}
+}

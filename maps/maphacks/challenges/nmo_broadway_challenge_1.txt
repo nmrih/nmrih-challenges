@@ -1,0 +1,74 @@
+// "Cinema Premiere"
+
+"MapHack"
+{
+	"events"
+	{
+		// Register events
+		"SpawnEvacTrigger"
+		{
+			"type"	"EVENT_OUTPUT"
+			"targetname"	"obj_h_laptopbutton"
+			"output"	"OnPressed"
+		}
+	}
+
+	// Main entities field, on map load
+	"entities"
+	{
+		// Used for extraction
+		"nmrih_game_state"
+		{
+			"targetname"	"gamestate"
+		}
+		
+		// Replacing RNG key spawns...
+		$remove { "targetname" "case_objc" }
+		"logic_case"
+		{
+			"targetname"	"case_objc"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnCase01" "template_objc_3,ForceSpawn,,0,-1"
+				}
+			}
+		}
+		
+		// Remove keypad RNG, only use code 9247
+		$remove { "targetname" "keypad_logic" }
+		$fire 
+		{ 
+			"targetname" "keypad_controller"
+			"input" "InputSetCode"
+			"value" "9247" 
+			"type"	"string" // Keypad only takes strings, have to override
+		}
+	}
+	
+	// Spawn a trigger near train doors for a fast evac
+	"SpawnEvacTrigger"
+	{
+		"instant_trigger"
+		{
+			"origin"	"-68.871 1286.160 459.531"
+			"angles"	"0 0 0"
+			"targetname"	"trig_evac"
+			"keyvalues"
+			{
+				"allowPlayers" "1"
+				"allowNPCs" "0"
+				"allowPhysics" "0"
+				"allowAll" "0"
+				"radius" "100"
+				
+				// Fire I/O chain to gamestate ent
+				"connections"
+				{
+					"OnTrigger" "gamestate,ExtractPlayer,,0,-1"
+				}
+			}
+		}
+	}
+}
