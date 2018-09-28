@@ -4,7 +4,7 @@
 {
 	"includes"
 	{
-		"file"	"maps/maphacks/include/nmo_toxteth_shared.txt"
+		"file" "maps/maphacks/include/nmo_toxteth_shared.txt"
 	}
 
 	"entities"
@@ -16,7 +16,7 @@
 		// Replace RNG crank
 		"logic_case"
 		{
-			"targetname"	"case_objk"
+			"targetname" "case_objk"
 			"keyvalues"
 			{
 				"connections"
@@ -29,7 +29,7 @@
 		// Replace RNG explosives
 		"logic_case"
 		{
-			"targetname"	"case_objd"
+			"targetname" "case_objd"
 			"keyvalues"
 			{
 				"connections"

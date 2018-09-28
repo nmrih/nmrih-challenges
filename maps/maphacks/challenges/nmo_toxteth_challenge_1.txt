@@ -4,7 +4,7 @@
 {
 	"includes"
 	{
-		"file"	"maps/maphacks/include/nmo_toxteth_shared.txt"
+		"file" "maps/maphacks/include/nmo_toxteth_shared.txt"
 	}
 
 	"entities"
@@ -17,13 +17,11 @@
 		"func_button"
 		{
 			"origin" "-850 -2049 139.51"
-			"targetname"	"toxteth_telephone"
+			"targetname" "toxteth_telephone"
 			"keyvalues"
 			{
 				"health" "0"
 				"lip" "0"
-				"locked_sentence" "0"
-				"locked_sound" "0"
 				"movedir" "0 0 0"
 				"sounds" "0"
 				"spawnflags" "3073"
@@ -41,7 +39,7 @@
 		// Replace RNG gas canister
 		"logic_case"
 		{
-			"targetname"	"case_objc"
+			"targetname" "case_objc"
 			"keyvalues"
 			{
 				"connections"
@@ -54,7 +52,7 @@
 		// Replace RNG explosives
 		"logic_case"
 		{
-			"targetname"	"case_objd"
+			"targetname" "case_objd"
 			"keyvalues"
 			{
 				"connections"
