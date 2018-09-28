@@ -17,16 +17,9 @@
 		"clrRand" { "type" "color" }
 	}
 	
-	"events"
-	{
-		"Rand_Refresh"
-		{
-			"type"	"EVENT_TRIGGER"
-		}
-	}
-	
 	"entities"
 	{
+		// Initial roll
 		$trigger { "event" "Rand_Refresh" }
 	}
 	

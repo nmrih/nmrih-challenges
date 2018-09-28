@@ -42,14 +42,9 @@
 		}
 	}
 
-	// Main entities field, on map load
 	"entities"
 	{
-		$remove
-		{
-			// Remove the old key logic_case, we'll replace it
-			"targetname"	"case_obja"
-		}
+		$remove { "targetname"	"case_obja" }
 		
 		// Custom logic_case for the key obj, spawn in set location
 		"logic_case"
@@ -83,9 +78,7 @@
 		
 		// Rare chance of surprise melon appearing
 		$trigger { "event" "Rand_Refresh" }
-		$if
-		{
-			"cond" "flRand >= 0.90"
+		$if { "cond" "flRand >= 0.90"
 			"entities"
 			{
 				$trigger { "event" "SpawnMelon" }
@@ -95,7 +88,7 @@
 	
 	"SpawnMelon"
 	{
-		// Spawn a melon to demo MapHacks events system
+		// Spawn a melon to demo MapHack events system
 		"prop_physics"
 		{
 			"targetname"	"surprise_melon"
@@ -104,7 +97,7 @@
 			"keyvalues"
 			{
 				"model"			"models/props_junk/watermelon01.mdl"
-				"rendercolor"	"%clrRand" // '%' = reference a MapHacks variable
+				"rendercolor"	"%clrRand" // '%' = reference a MapHack variable
 			}
 		}
 		

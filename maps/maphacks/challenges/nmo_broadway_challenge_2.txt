@@ -9,8 +9,12 @@
 
 	"entities"
 	{
-		// Replace RNG gas canister
 		$remove { "targetname" "1case_objb" }
+		$remove { "targetname" "case_obje" }
+		$remove { "targetname" "case_objg" }
+		$remove { "targetname" "keypad_logic" }
+	
+		// Replace RNG gas canister
 		"logic_case"
 		{
 			"targetname"	"1case_objb"
@@ -24,7 +28,6 @@
 		}
 		
 		// Replace RNG bar key
-		$remove { "targetname" "case_obje" }
 		"logic_case"
 		{
 			"targetname"	"case_obje"
@@ -38,7 +41,6 @@
 		}
 	
 		// Replace RNG switch
-		$remove { "targetname" "case_objg" }
 		"logic_case"
 		{
 			"targetname"	"case_objg"
@@ -52,7 +54,6 @@
 		}
 		
 		// Remove keypad RNG, only use code 1854
-		$remove { "targetname" "keypad_logic" }
 		$fire 
 		{ 
 			"targetname" "keypad_controller"

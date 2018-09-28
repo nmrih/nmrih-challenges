@@ -9,8 +9,10 @@
 
 	"entities"
 	{
-		// Replacing RNG key spawns...
 		$remove { "targetname" "case_objc" }
+		$remove { "targetname" "keypad_logic" }
+		
+		// Replace RNG key spawn
 		"logic_case"
 		{
 			"targetname"	"case_objc"
@@ -24,7 +26,6 @@
 		}
 		
 		// Remove keypad RNG, only use code 9247
-		$remove { "targetname" "keypad_logic" }
 		$fire 
 		{ 
 			"targetname" "keypad_controller"
