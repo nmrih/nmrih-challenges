@@ -35,6 +35,14 @@
 			"8"	"33"
 			"9"	"35"
 		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_toxteth_challenge_1.txt"
+			}
+		}
 	}
 	
 	"nmo_toxteth_challenge_2"
@@ -53,6 +61,14 @@
 			"8"	"47"
 			"9"	"33"
 			"10"	"35"
+		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_toxteth_challenge_2.txt"
+			}
 		}
 	}
 }
