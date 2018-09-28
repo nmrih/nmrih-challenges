@@ -15,7 +15,7 @@
 		// Used for extraction
 		"nmrih_game_state"
 		{
-			"targetname"	"gamestate"
+			"targetname"	"game_state"
 		}
 	}
 	
@@ -30,15 +30,13 @@
 			"keyvalues"
 			{
 				"allowPlayers" "1"
-				"allowNPCs" "0"
-				"allowPhysics" "0"
-				"allowAll" "0"
 				"radius" "78"
+				"noclear" "1"
 				
 				// Fire I/O chain to gamestate ent
 				"connections"
 				{
-					"OnTrigger" "gamestate,ExtractPlayer,,0,-1"
+					"OnTrigger" "game_state,ExtractPlayer,,0,-1"
 				}
 			}
 		}
