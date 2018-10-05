@@ -9,24 +9,16 @@
 
 	"entities"
 	{
-		$remove { "targetname" "toxteth_telephone" }
-		$remove { "targetname" "case_objc" }
-		$remove { "targetname" "case_objd" }
+		$remove_connections { "targetname" "toxteth_telephone" }
+		$remove_connections { "targetname" "case_objc" }
+		$remove_connections { "targetname" "case_objd" }
 	
-		// Replace the telephone (button)
-		"func_button"
+		// Replace the telephone I/O
+		$edit
 		{
-			"origin" "-850 -2049 139.51"
 			"targetname" "toxteth_telephone"
 			"keyvalues"
 			{
-				"health" "0"
-				"lip" "0"
-				"movedir" "0 0 0"
-				"sounds" "0"
-				"spawnflags" "3073"
-				"wait" "-1"
-				
 				"connections"
 				{
 					"OnPressed" "toxteth_objb_phonesound,StopSound,,0,1"
@@ -37,7 +29,7 @@
 		}
 	
 		// Replace RNG gas canister
-		"logic_case"
+		$edit
 		{
 			"targetname" "case_objc"
 			"keyvalues"
@@ -50,7 +42,7 @@
 		}
 		
 		// Replace RNG explosives
-		"logic_case"
+		$edit
 		{
 			"targetname" "case_objd"
 			"keyvalues"

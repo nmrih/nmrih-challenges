@@ -9,11 +9,11 @@
 
 	"entities"
 	{
-		$remove { "targetname" "case_objc" }
+		$remove_connections { "targetname" "case_objc" }
 		$remove { "targetname" "keypad_logic" }
 		
 		// Replace RNG key spawn
-		"logic_case"
+		$edit
 		{
 			"targetname"	"case_objc"
 			"keyvalues"

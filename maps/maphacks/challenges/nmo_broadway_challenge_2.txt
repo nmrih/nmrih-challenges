@@ -9,13 +9,13 @@
 
 	"entities"
 	{
-		$remove { "targetname" "1case_objb" }
-		$remove { "targetname" "case_obje" }
-		$remove { "targetname" "case_objg" }
+		$remove_connections { "targetname" "1case_objb" }
+		$remove_connections { "targetname" "case_obje" }
+		$remove_connections { "targetname" "case_objg" }
 		$remove { "targetname" "keypad_logic" }
 	
 		// Replace RNG gas canister
-		"logic_case"
+		$edit
 		{
 			"targetname"	"1case_objb"
 			"keyvalues"
@@ -28,7 +28,7 @@
 		}
 		
 		// Replace RNG bar key
-		"logic_case"
+		$edit
 		{
 			"targetname"	"case_obje"
 			"keyvalues"
@@ -41,7 +41,7 @@
 		}
 	
 		// Replace RNG switch
-		"logic_case"
+		$edit
 		{
 			"targetname"	"case_objg"
 			"keyvalues"

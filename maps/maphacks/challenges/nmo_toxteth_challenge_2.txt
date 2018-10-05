@@ -9,12 +9,12 @@
 
 	"entities"
 	{
-		$remove { "targetname" "case_objd" }
-		$remove { "targetname" "case_objk" }
+		$remove_connections { "targetname" "case_objd" }
+		$remove_connections { "targetname" "case_objk" }
 		$remove { "targetname" "toxteth_chapel_floordoor" }
 		
 		// Replace RNG crank
-		"logic_case"
+		$edit
 		{
 			"targetname" "case_objk"
 			"keyvalues"
@@ -27,7 +27,7 @@
 		}
 		
 		// Replace RNG explosives
-		"logic_case"
+		$edit
 		{
 			"targetname" "case_objd"
 			"keyvalues"

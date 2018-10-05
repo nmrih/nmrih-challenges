@@ -19,7 +19,7 @@
 
 	"entities"
 	{
-		$remove { "targetname" "badass_door_case" }
+		$remove_connections { "targetname" "badass_door_case" }
 		$remove { "targetname" "telephonet" } // Remove 2nd telephone template, we spawn it manually
 		
 		// Used for extraction
@@ -29,7 +29,7 @@
 		}
 		
 		// Always unlock the weapons stash
-		"logic_case"
+		$edit
 		{
 			"targetname" "badass_door_case"
 			"keyvalues"

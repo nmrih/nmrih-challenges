@@ -44,10 +44,10 @@
 
 	"entities"
 	{
-		$remove { "targetname"	"case_obja" }
+		$remove_connections { "targetname" "case_obja" }
 		
-		// Custom logic_case for the key obj, spawn in set location
-		"logic_case"
+		// Remove key RNG
+		$edit
 		{
 			"targetname"	"case_obja"
 			"keyvalues"

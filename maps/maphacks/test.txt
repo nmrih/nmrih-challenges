@@ -167,6 +167,12 @@
 		// Start a timed MapHack event (stops in EventTimed)
 		$start { "event" "EventTimed" }
 		
+		// Respawn an entity
+		$respawn { "targetname" "test_melon" }
+		
+		// Remove connections
+		$remove_connections { "targetname" "test_melon" }
+		
 		// Remove an entity
 		$remove { "targetname" "test_melon" }
 		
