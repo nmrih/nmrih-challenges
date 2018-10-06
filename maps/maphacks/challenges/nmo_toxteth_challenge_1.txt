@@ -4,7 +4,7 @@
 {
 	"includes"
 	{
-		"file" "maps/maphacks/include/nmo_toxteth_shared.txt"
+		"file" "maps/maphacks/challenges/nmo_toxteth_shared.txt"
 	}
 
 	"entities"
