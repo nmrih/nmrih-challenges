@@ -1,0 +1,14 @@
+// "Under the Cabin"
+
+"MapHack"
+{
+	"includes"
+	{
+		"file"	"maps/maphacks/challenges/nmo_cabin_shared.txt"
+	}
+
+	"entities"
+	{
+		// TODO
+	}
+}

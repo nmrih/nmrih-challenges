@@ -4,42 +4,7 @@
 {
 	"includes"
 	{
-		"file"	"maps/maphacks/include/rand.txt"
-	}
-	
-	"precache"
-	{
-		"sound"	"Pain.FemaleDefault"
-		"sound"	"ambient\radio\radio_internet_blava.wav"
-	}
-	
-	"events"
-	{
-		// Register events
-		"SpawnMelon"
-		{
-			"type"	"EVENT_TRIGGER"
-		}
-		
-		"OnMelonPickup"
-		{
-			"type"	"EVENT_OUTPUT"
-			"targetname"	"surprise_melon"
-			"output"	"OnPlayerPickup"
-		}
-		
-		"BreakMelon"
-		{
-			"type"	"EVENT_TRIGGER"
-		}
-		
-		"DiscoMelon"
-		{
-			"type"	"EVENT_TIMED"
-			"delay"	"1.0"
-			"repeat"	"1"
-			"startDisabled"	"1"
-		}
+		"file"	"maps/maphacks/challenges/nmo_cabin_shared.txt"
 	}
 
 	"entities"
@@ -56,81 +21,6 @@
 				{
 					"OnCase01"	"template_obja_1,ForceSpawn,,0,-1"
 				}
-			}
-		}
-		
-		// Open up the spawn door
-		$fire { "targetname" "cabin_spawn_door" "input" "Unlock" }
-		$fire { "targetname" "cabin_spawn_door" "input" "Open" }
-		
-		// Destroy the planks
-		$fire { "id" "126781" "input" "Break" } // using Hammer IDs... ew
-		
-		// Replace radio message
-		$edit
-		{
-			"targetname"	"radiostatic"
-			"keyvalues"
-			{
-				"message"	"ambient\radio\radio_internet_blava.wav"
-			}
-		}
-		
-		// Rare chance of surprise melon appearing
-		$trigger { "event" "Rand_Refresh" }
-		$if { "cond" "flRand >= 0.90"
-			"entities"
-			{
-				$trigger { "event" "SpawnMelon" }
-			}
-		}
-	}
-	
-	"SpawnMelon"
-	{
-		// Spawn a melon to demo MapHack events system
-		"prop_physics"
-		{
-			"targetname"	"surprise_melon"
-			"origin"	"-1150 -416 333"
-			"angles"	"0 -180 0"
-			"keyvalues"
-			{
-				"model"			"models/props_junk/watermelon01.mdl"
-				"rendercolor"	"%clrRand" // '%' = reference a MapHack variable
-			}
-		}
-		
-		$start { "event" "DiscoMelon" }
-	}
-	
-	"OnMelonPickup"
-	{
-		// Trigger delayed break event
-		$trigger { "event" "BreakMelon" "delay" "1.0" }
-	}
-	
-	"BreakMelon"
-	{
-		// "Aaahh"
-		$playsound { "name" "Pain.FemaleDefault" "source" "surprise_melon" }
-		
-		// Break it
-		$fire { "targetname"	"surprise_melon" "input" "Break" }
-		
-		// Stop randomizing
-		$stop { "event" "DiscoMelon" }
-	}
-	
-	"DiscoMelon"
-	{
-		$trigger { "event" "Rand_Refresh" }
-		$edit
-		{
-			"targetname"	"surprise_melon"
-			"keyvalues"
-			{
-				"rendercolor"	"%clrRand"
 			}
 		}
 	}
