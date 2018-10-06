@@ -73,6 +73,17 @@
 				$trigger { "event" "SpawnMelon" }
 			}
 		}
+		
+		// Anti-frustration measures for all door planks
+		$edit { "id" "136410" "keyvalues" { "health" "5" } }
+		$edit { "id" "136413" "keyvalues" { "health" "5" } }
+		$edit { "id" "136416" "keyvalues" { "health" "5" } }
+		$edit { "id" "136419" "keyvalues" { "health" "5" } }
+		$edit { "id" "136422" "keyvalues" { "health" "5" } }
+		$edit { "id" "580817" "keyvalues" { "health" "5" } }
+		$edit { "id" "580814" "keyvalues" { "health" "5" } }
+		$edit { "id" "580811" "keyvalues" { "health" "5" } }
+		$edit { "id" "580808" "keyvalues" { "health" "5" } }
 	}
 	
 	"SpawnMelon"
