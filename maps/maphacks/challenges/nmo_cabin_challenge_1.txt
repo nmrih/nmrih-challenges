@@ -10,6 +10,7 @@
 	"entities"
 	{
 		$remove_connections { "targetname" "case_obja" }
+		$remove_connections { "targetname" "battery_picker" }
 		
 		// Remove key RNG
 		$edit
@@ -20,6 +21,19 @@
 				"connections"
 				{
 					"OnCase01"	"template_obja_1,ForceSpawn,,0,-1"
+				}
+			}
+		}
+		
+		// Remove car battery RNG
+		$edit
+		{
+			"targetname" "battery_picker"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnCase01" "template_propp_obji1,ForceSpawn,,0,-1"
 				}
 			}
 		}
