@@ -1,0 +1,37 @@
+// 28: objective4 - Fix the fuse box to open emergency door
+// 29: objective5 - Use the I.Dcard  to disengage viral lockdown 
+// 31: objective7 - Use Menglers code to open the high security freezer
+// 32: objective8 - Reactivate the radio relay
+// 33: objective9 - Use the radio to send an SOS
+// 34: objective10 - Play bob the master’s voice to open the high security freezer
+// 35: objective11 - Recover the retroviral vaccine
+// 36: objective12 - Prime napalm canisters 
+// 37: objective13 - Escape the complex before sterilisation
+// 38: objective14 - Find an explosive to open the quarantine door
+// 39: objective15 - Radio for rescue
+// 40: objective16 - Cut the power to the electrified puddle
+// 41: objective17 - Use crank to open specimen gate
+// 42: objective18 - Use the blasting caps to blow the rock
+// 43: objective19 - Use blasting caps to clear rock slide
+// 44: objective20 - Weld off the ladders latch
+// 45: objective21 - Use the key to open surface gate
+// 48: objective24 - Secure the vaccine in case
+// 49: objective25 - Secure the vaccine onto the supply drop
+// 50: objective28 - Arm sterilisation procedure
+// 52: objective29 - Uncouple the load wagon
+// 46: objective30 - Take the stashed vaccine
+// 47: objective27 - Use the captain’s key to access the armoury
+// 24: Objective31 - Break out of the decontamination area
+// 26: Objective32 - Find the fuse for the surface generator
+// 27: Objective33 - Radio an S.O.S
+// 30: Objective34 - Setup the diesel pump for the chopper
+// 51: Objective35 - Keep the diesel pumping
+// 53: Objective36 - Use a welder to cut open the quarantine door
+// 54: Objective37 - Use a ladder to sneak inside the quarantine
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}

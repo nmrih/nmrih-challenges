@@ -1,0 +1,21 @@
+// 27: ObjA - Find some tnt to get through the alley gate.
+// 28: ObjB - Find some tnt to get through the alley gate.
+// 29: ObjC - Find some tnt to get through the alley gate.
+// 30: ObjZ - Follow the whiteboard objective.
+// 31: ObjE - Find 4 boards to get across the electrified water.
+// 32: ObjF - Find lever to turn power off.
+// 33: ObjH - Use ladder to get into Samco store.
+// 34: ObjI - Use welder to break into the store.
+// 35: ObjJ - Find a ladder to get over the alley gate.
+// 36: ObjG - Blast through alley wall.
+// 37: OBjD - Go through the house and break through the front.
+// 38: ObjK - Get to the next alley.
+// 39: ObjR - Find some pliers to cut the lock, you have 3 minutes to get extracted!
+// 40: ObjL - Find welder to get back alley gate open.
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}

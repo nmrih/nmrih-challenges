@@ -1,0 +1,27 @@
+// 20: Open The Door - Find a way to open the door!
+// 21: Fence Welder - Weld through grate!
+// 22: Find Dinamite - Find dynamite and blow up the wall!
+// 26: Elevator - Activate elevator!
+// 37: Last_Objective - Use all looted items!
+// 38: HelicopterCome - Wait for the helicopter!
+// 28: cart1a - Push the cart!
+// 30: cart1b - Push the cart!
+// 31: cart2b - Loot a smoke grenade!
+// 32: cart2a - Look for a code in the office building and loot a can of paint!
+// 33: cart3a - Push the cart!
+// 34: cart4a - Loot the car battery!
+// 35: cart5a - Push the cart!
+// 36: cart6a - Loot a smoke grenade!
+// 39: cart7a - Push the cart!
+// 40: cart3b - Push the cart!
+// 41: cart4b - Loot the car battery!
+// 42: cart5b - Push the cart!
+// 43: cart6b - Look for a code in the office building and loot a can of paint!
+// 44: cart7b - Push the cart!
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}

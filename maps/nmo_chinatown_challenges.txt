@@ -1,0 +1,13 @@
+// 29: subway_escape - Escape the subway!
+// 28: gate_fix - Find fuel for generator to open the gate!
+// 36: ladder_dismount - Release the ladder on the roadblock!
+// 35: sewer_way - Find your way through the sewers!
+// 26: welder - Use welder on the gate's lock to open it!
+// 34: docks_finale - Power up the radio and call for rescue!
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}

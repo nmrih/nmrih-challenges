@@ -1,0 +1,14 @@
+// 27: Objectives_Door - Find a Key to Unlock the Door.
+// 24: Objectives_Radio - Use the Radio to Send an SOS.
+// 28: Objectives_Survive - Survive.
+// 25: Objectives_Secure - Secure the Boardwalk. Wait for Evac.
+// 29: Objectives_Propane - Break Through the Barricade.
+// 31: Objectives_Can - Light a Signal Fire.
+// 32: Objectives_Gauntlet - Find the Safehouse.
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}

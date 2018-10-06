@@ -1,0 +1,32 @@
+// 33: Objective01_leavestation - Find a way out of the station
+// 35: Objective02_maintenancedetour - Main entrance blocked, find alternative exit
+// 23: Objective03_tolindun - Find your way to Lindun Road
+// 25: Objective04_headout - Cross the bridge
+// 36: Objective05_oldtown - Find a way to enter the Old Quarter
+// 42: Objective06_findgas - Find gas to drench barricade in
+// 34: Objective07_burngas - Ignite the barricade using a welder
+// 37: Objective08_extinguishgas - The fire is not dying, find an extinguisher
+// 24: Objective09_crosscanal - Bridge the canal and cross it
+// 38: Objective10_IEDalley - Find an IED to blow up the alley door
+// 43: Objective11_welderalley - Find a welder to open the alley door
+// 47: Objectivemidpoint_intermediate - Search for evac station
+// 39: Objective12_IEDtires - Find explosives to destroy tire fort
+// 40: Objective13_extinguishtires - Extinguish tire fort
+// 26: Objective14_detourtires - Go down the alley path
+// 32: Objective15_batterybarricade - Find a car battery to power the door
+// 27: Objective16_truckpuzzle - Clear the path by moving the truck
+// 46: Objective16b_recrosscanal - Cross canal via the truck
+// 30: Objective17_findevac - Continue to evac station
+// 28: Objective18_horrifyingrealization - Evac station has succumbed to infection! Use radio to call help!
+// 31: Objective19_batteryforradio - Power is down, find a car battery to run it
+// 29: Objective20_flarelauncher - Find a way to signal the boat
+// 44: Objective21_burnbabehburn - Find some fuel
+// 63: Objecitve22_burnbabehburn_ignite - Set fire to the evac center using a welder to signal the boat!
+// 66: Objective23_holdout - Rescue is coming! Survive!
+
+// Objective challenges
+// KV names are identifiers, and will be saved in records!
+"Challenges"
+{
+	// TODO
+}
