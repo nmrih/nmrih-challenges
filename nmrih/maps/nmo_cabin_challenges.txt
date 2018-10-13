@@ -78,4 +78,41 @@
 			}
 		}
 	}
+	
+	"nmo_cabin_blitz_1"
+	{
+		"Name"	"Blitz: Cabin Fever"
+		"Blitz"	"1"
+		"Objectives"
+		{
+			"0"	"21"
+			"1"	"26"
+			"2"	"30"
+			"3"	"27"
+			"4"	"32"
+			"5"	"33"
+		}
+		
+		"BlitzParams"
+		{
+			"InitialTime"	"180" // Start at 3 minutes
+			
+			// Objective timer additions
+			"DefaultObjAdd" "30" // By default, add 30s
+			"ObjectiveTimerAdd"
+			{
+				"28" "0" // Kludge for bookcase (ObjF) being completed outside obj chain
+				"32" "120" // Give extra for car battery obj
+				"33" "60" // Give extra time for evac
+			}
+		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_cabin_challenge_1.txt"
+			}
+		}
+	}
 }
