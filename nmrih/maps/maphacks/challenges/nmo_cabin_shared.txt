@@ -40,7 +40,7 @@
 					"OnTrigger" "!activator,Kill,,0,-1"
 					"OnTrigger" "obja_door1,Unlock,,0,-1"
 					"OnTrigger" "template_obja,ForceSpawn,,0,-1"
-					"OnTrigger" "propp_obja_dummy,Kill,,0,-1"
+					"OnTrigger" "propp_obja_dummy,Kill,,0.1,-1"
 					"OnTrigger" "boundary_obja,ObjectiveComplete,,0,-1"
 					"OnTrigger" "obj_a_click1,PlaySound,,0,-1"
 				}
