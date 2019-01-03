@@ -5,9 +5,28 @@
 // 26: welder - Use welder on the gate's lock to open it!
 // 34: docks_finale - Power up the radio and call for rescue!
 
-// Objective challenges
-// KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_chinatown_challenge_1"
+	{
+		"Name"	"Cutting Corners"
+		"Description" "Make your way through the map using shortcuts"
+		"Objectives"
+		{
+			"0" "29"
+			"1"	"28"
+			"2"	"36"
+			"3"	"35"
+			"4"	"26"
+			"5"	"34"
+		}
+
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_chinatown_challenge_1.txt"
+			}
+		}
+	}
 }
