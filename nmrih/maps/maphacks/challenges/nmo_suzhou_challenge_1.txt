@@ -21,19 +21,19 @@
 		$remove_connections{"targetname" "extinguisher3_randomizer"}
 
 		// Spawn barricade gas can as far as possible
-        $remove_connections{ "targetname" "barricade_gascan_randomizer"}
-        $edit
-        {
-            "targetname" "barricade_gascan_randomizer"
-            "keyvalues"
-            {
-                "connections"
-                {
-                    "OnCase01" "barricade_gascan_Template,ForceSpawn,,0,-1"
-                    "OnCase01" "barricade_gascan_lcation1,Teleport,,0.1,-1"
-                }
-            }
-        }
+		$remove_connections{ "targetname" "barricade_gascan_randomizer"}
+		$edit
+		{
+			"targetname" "barricade_gascan_randomizer"
+			"keyvalues"
+			{
+				"connections"
+				{
+					"OnCase01" "barricade_gascan_Template,ForceSpawn,,0,-1"
+					"OnCase01" "barricade_gascan_lcation1,Teleport,,0.1,-1"
+				}
+			}
+		}
 
 		// Spawn welder as far as possible
 		$remove_connections{"targetname" "welder_Randomizer"}

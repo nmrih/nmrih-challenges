@@ -4,29 +4,13 @@
 {
 	"includes"
 	{
-		"file" "maps/maphacks/challenges/nmo_toxteth_shared.txt"
+		"file" "maps/maphacks/challenges/include/nmo_toxteth_shared.txt"
 	}
 
 	"entities"
 	{
-		$remove_connections { "targetname" "toxteth_telephone" }
 		$remove_connections { "targetname" "case_objc" }
 		$remove_connections { "targetname" "case_objd" }
-	
-		// Replace the telephone I/O
-		$edit
-		{
-			"targetname" "toxteth_telephone"
-			"keyvalues"
-			{
-				"connections"
-				{
-					"OnPressed" "toxteth_objb_phonesound,StopSound,,0,1"
-					"OnPressed" "toxteth_phoneline01a,PickRandom,,1,1"
-					"OnPressed" "boundary_objB,ObjectiveComplete,,0,1" // Don't bother listening through the obnoxiously long phone call!
-				}
-			}
-		}
 	
 		// Replace RNG gas canister
 		$edit

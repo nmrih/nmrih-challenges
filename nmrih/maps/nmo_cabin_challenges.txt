@@ -17,6 +17,7 @@
 	"nmo_cabin_challenge_1"
 	{
 		"Name"	"Cabin Fever"
+		"Description"	"Local neighbors don't seem too impressed about your antics, better get the hell out from here."
 		"Objectives"
 		{
 			"0"	"21"
@@ -39,6 +40,7 @@
 	"nmo_cabin_challenge_2"
 	{
 		"Name"	"Under the Cabin"
+		"Description"	"What did the janitor hide down there? Let's find out."
 		"Objectives"
 		{
 			"0"	"23"
@@ -60,6 +62,7 @@
 	"nmo_cabin_challenge_3"
 	{
 		"Name"	"Secret Knowledge"
+		"Description"	"The family is the answer, also featuring moving bookcases!"
 		"Objectives"
 		{
 			"0"	"21"
@@ -82,6 +85,7 @@
 	"nmo_cabin_blitz_1"
 	{
 		"Name"	"Blitz: Cabin Fever"
+		"Description"	"Now they are really onto us... In Blitz mode, gain more time by completing objectives!"
 		"Blitz"	"1"
 		"Objectives"
 		{
@@ -111,7 +115,7 @@
 		{
 			"includes"
 			{
-				"file"	"maps/maphacks/challenges/nmo_cabin_challenge_1.txt"
+				"file"	"maps/maphacks/challenges/blitz/nmo_cabin_blitz_1.txt"
 			}
 		}
 	}

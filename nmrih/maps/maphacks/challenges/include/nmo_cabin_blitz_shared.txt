@@ -1,22 +1,7 @@
 "MapHack"
 {
-	"precache"
-	{
-		"sound" "ambient\radio\radio_internet_blava.wav"
-	}
-
 	"entities"
 	{
-		// Replace radio message
-		$edit
-		{
-			"targetname" "radiostatic"
-			"keyvalues"
-			{
-				"message" "ambient\radio\radio_internet_blava.wav"
-			}
-		}
-		
 		// Anti-frustration measures for all door planks
 		$edit { "id" "136410" "keyvalues" { "health" "5" } }
 		$edit { "id" "136413" "keyvalues" { "health" "5" } }
@@ -28,7 +13,7 @@
 		$edit { "id" "580811" "keyvalues" { "health" "5" } }
 		$edit { "id" "580808" "keyvalues" { "health" "5" } }
 		
-		// Unlocking a door with a key wastes over 6 fricking seconds, make it quick
+		// Unlocking a door with a key takes over 6 fricking seconds, make it quick
 		$remove_connections { "targetname" "triggera" }
 		$edit
 		{

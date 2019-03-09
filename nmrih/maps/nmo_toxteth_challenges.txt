@@ -22,6 +22,7 @@
 	"nmo_toxteth_challenge_1"
 	{
 		"Name"	"Graveyard Dash"
+		"Description"	"I suggest cutting through the graveyard..."
 		"Objectives"
 		{
 			"0"	"17"
@@ -48,6 +49,7 @@
 	"nmo_toxteth_challenge_2"
 	{
 		"Name"	"Sewer Sweep"
+		"Description"	"Well, if you don't mind the sludge. Look out for sewer mutants!"
 		"Objectives"
 		{
 			"0"	"17"
@@ -68,6 +70,87 @@
 			"includes"
 			{
 				"file"	"maps/maphacks/challenges/nmo_toxteth_challenge_2.txt"
+			}
+		}
+	}
+	
+	"nmo_toxteth_blitz_1"
+	{
+		"Name"	"Blitz: Graveyard Dash"
+		"Description"	"We can't afford much time so be quick! In Blitz mode, gain more time by completing objectives!"
+		"Blitz"	"1"
+		"Objectives"
+		{
+			"0"	"17"
+			"1"	"19"
+			"2"	"20"
+			"3"	"22"
+			"4"	"26"
+			"5"	"28"
+			"6"	"34"
+			"7"	"47"
+			"8"	"33"
+			"9"	"35"
+		}
+		
+		"BlitzParams"
+		{
+			"InitialTime"	"180" // Start at 3 minutes
+			
+			// Objective timer additions
+			"DefaultObjAdd" "30" // By default, add 30s
+			"ObjectiveTimerAdd"
+			{
+				// TODO
+			}
+		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_toxteth_blitz_1.txt"
+			}
+		}
+	}
+	
+	"nmo_toxteth_blitz_2"
+	{
+		"Name"	"Blitz: Sewer Sweep"
+		"Description"	"You do realize you're walking on other people's excrement right? In Blitz mode, gain more time by completing objectives!"
+		"Blitz"	"1"
+		"Objectives"
+		{
+			"0"	"17"
+			"1"	"45"
+			"2"	"42"
+			"3"	"43"
+			"4"	"22"
+			"5"	"25"
+			"6"	"29"
+			"7"	"34"
+			"8"	"47"
+			"9"	"33"
+			"10"	"35"
+		}
+		
+		"BlitzParams"
+		{
+			"InitialTime"	"180" // Start at 3 minutes
+			
+			// Objective timer additions
+			"DefaultObjAdd" "30" // By default, add 30s
+			"ObjectiveTimerAdd"
+			{
+				// TODO
+			}
+		}
+		
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_toxteth_blitz_2.txt"
 			}
 		}
 	}

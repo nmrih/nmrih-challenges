@@ -22,6 +22,7 @@
 	"nmo_toxtethdark_challenge_1"
 	{
 		"Name"	"Graveyard Dash (Dark)"
+		"Description"	"I suggest cutting through the graveyard..."
 		"Objectives"
 		{
 			"0"	"17"
@@ -48,6 +49,7 @@
 	"nmo_toxtethdark_challenge_2"
 	{
 		"Name"	"Sewer Sweep (Dark)"
+		"Description"	"Well, if you don't mind the sludge..."
 		"Objectives"
 		{
 			"0"	"17"

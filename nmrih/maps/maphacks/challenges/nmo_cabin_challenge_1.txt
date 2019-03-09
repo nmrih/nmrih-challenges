@@ -4,7 +4,7 @@
 {
 	"includes"
 	{
-		"file"	"maps/maphacks/challenges/nmo_cabin_shared.txt"
+		"file"	"maps/maphacks/challenges/include/nmo_cabin_shared.txt"
 	}
 
 	"entities"

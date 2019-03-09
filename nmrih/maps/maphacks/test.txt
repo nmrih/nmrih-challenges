@@ -4,7 +4,7 @@
 	// Test include
 	"includes"
 	{
-		"file"	"maps/maphacks/include/rand.txt"
+		"file"	"maps/maphacks/challenges/include/rand.txt"
 	}
 
 	// Test precache
