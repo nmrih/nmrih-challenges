@@ -33,5 +33,61 @@
 // KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_fema_challenge_1"
+	{
+		"Name" "Public Hero"
+		"Description" "Help secure the retroviral vaccine and we might return the favor"
+		"Objectives"
+		{
+			"0" "24" // Break out of the decontamination area
+			"1" "28" // Fix the fuse box to open emergency door
+			"2" "29" // Use the I.Dcard  to disengage viral lockdown 
+			"3" "53" // Use a welder to cut open the quarantine door
+			"4" "32" // Reactivate the radio relay
+			"5" "34" // Play bob the master’s voice to open the high security freezer
+			"6" "31" // Use Menglers code to open the high security freezer
+			"7" "35" // Recover the retroviral vaccine
+			"8" "38" // Find an explosive to open the quarantine door
+			"9" "40" // Cut the power to the electrified puddle
+			"10" "41" // Use crank to open specimen gate
+			"11" "52" // Uncouple the load wagon
+			"12" "43" // Use blasting caps to clear rock slide
+			"13" "44" // Weld off the ladders latch
+			"14" "45" // Use the key to open surface gate
+			"15" "26" // Find the fuse for the surface generator
+			"16" "27" // Radio an S.O.S
+			"17" "48" // Secure the vaccine in case
+			"18" "49" // Secure the vaccine onto the supply drop
+		}
+	}
+
+	"nmo_fema_challenge_2"
+	{
+		"Name" "Pump it"
+		"Description" "We can't take off without fuel, keep that diesel pumping!"
+		"Objectives"
+		{
+			"0" "24" // Break out of the decontamination area
+			"1" "28" // Fix the fuse box to open emergency door
+			"2" "29" // Use the I.Dcard  to disengage viral lockdown 
+			"3" "54" // Use a ladder to sneak inside the quarantine
+			"4" "33" // Use the radio to send an SOS
+			"5" "47" // Use the captain’s key to access the armoury
+			"6" "36" // Prime napalm canisters 
+			"7" "50" // Arm sterilisation procedure
+			"8" "37" // Escape the complex before sterilisation
+			"9" "39" // Radio for rescue
+			"10" "46" // Take the stashed vaccine
+			"11" "40" // Cut the power to the electrified puddle
+			"12" "41" // Use crank to open specimen gate
+			"13" "52" // Uncouple the load wagon
+			"14" "43" // Use blasting caps to clear rock slide
+			"15" "44" // Weld off the ladders latch
+			"16" "45" // Use the key to open surface gate
+			"17" "26" // Find the fuse for the surface generator
+			"18" "27" // Radio an S.O.S
+			"19" "30" // Setup the diesel pump for the chopper
+			"20" "51" // Keep the diesel pumping
+		}
+	}
 }
