@@ -29,7 +29,7 @@
 	"nmo_suzhou_challenge_1"
 	{
 		"Name"	"Bad Hair Day"
-		"Description" "A round of Suzhou with the most unfortunate series of events"
+		"Description" "Complete a round with the longest possible objective chain"
 		"Objectives"
 		{
 			"0" "33"
@@ -50,14 +50,6 @@
 			"15" "44"
 			"16" "63"
 			"17" "66"
-		}
-
-		"MapHack"
-		{
-			"includes"
-			{
-				"file"	"maps/maphacks/challenges/nmo_suzhou_challenge_1.txt"
-			}
 		}
 	}
 }
