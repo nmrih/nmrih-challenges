@@ -1,4 +1,5 @@
 // MapHacks use KeyValues syntax
+// Root key must be named as maphack (case insensitive)
 "MapHack"
 {
 	// Test include
@@ -36,6 +37,12 @@
 		// For $getpos & $getang test
 		"vecPos" { "type" "string" }
 		"vecAng" { "type" "string" }
+		
+		// For macro test (also tests case sensitivity)
+		// !!! - THESE ARE UNUSED, OBSOLETE, GONE, MAYBERETURNSOMEDAYIDK - !!!
+		//"mapName" { "type" "string" }
+		//"curTime" { "type" "float" }
+		//"maxClients" { "type" "int" }
 	}
 
 	// Test events
@@ -65,6 +72,7 @@
 		}
 		
 		// MAPHACK_EVENT_GAMEEVENT
+		// (ambiguous naming ftw :()
 		"EventGameEvent"
 		{
 			"type"	"EVENT_GAMEEVENT"
@@ -93,8 +101,23 @@
 				"rendercolor"	"%clrTest" // '%' = reference a MapHacks variable
 			}
 		}
+		
+		// Input test
+		"env_explosion"
+		{
+			"targetname" "explosion"
+			"origin" "0 0 0"
+			"angles" "0 0 0"
+			"keyvalues"
+			{
+				"magnitude"	"1337"
+			}
+		}
 
 		// Check for variable condition
+		// Keys:
+		// "cond" - Condition to test, uses C style operators
+		// "entities" - Entities field to run if test passes
 		$if
 		{
 			"cond" "iTest == 42"
@@ -105,27 +128,51 @@
 		}
 		
 		// Set variable
+		// Keys:
+		// "var" - Variable to set
+		// "value" - Value to set
 		$set { "var" "iTest" "value" "2" }
 		
 		// Increment variable
+		// Keys:
+		// "var" - Variable to increment
 		$increment { "var" "iTest" }
 		
 		// Decrement variable
+		// Keys:
+		// "var" - Variable to decrement
 		$decrement { "var" "iTest" }
 		
 		// Set a variable to a random value (also test maphack var ref)
+		// Keys:
+		// "var" - Chosen variable
+		// "rand_min" - Min random value
+		// "rand_max" - Max random value
 		$rand { "var" "iTest" "rand_min" "%randMin" "rand_max" "%randMax" }
 		
 		// Send a command to console, or debug spew
+		// Keys:
+		// "cmd" - Send a console command
+		// "msg" - Send console spew
+		// "warning" - Send console warning
 		$console { "cmd" "echo cmd" }
 		$console { "msg" "$console msg" }
-		$console { "msg" "$console warning" }
+		$console { "warning" "$console warning" }
 		
 		// Fire an input
-		$fire { "targetname"	"test_melon" "input" "Sleep" }
-		$fire { "targetname"	"test_melon" "input" "Wake" }
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
+		// "input" - Input to fire
+		$fire { "targetname" "test_melon" "input" "Sleep" }
+		$fire { "targetname" "test_melon" "input" "Wake" }
+		$fire { "targetname" "explosion" "input" "Explode" }
 		
 		// Set KeyValues for existing entity
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
+		// "keyvalues" - KeyValues to set, you can insert new pairs
 		$edit
 		{
 			"targetname"	"test_melon"
@@ -136,6 +183,9 @@
 		}
 		
 		// Set KeyValues for ALL existing entities
+		// Keys:
+		// "classname" - Target all entities by classname
+		// "keyvalues" - KeyValues to set, you can insert new pairs
 		$edit_all
 		{
 			"classname"	"prop_physics"
@@ -146,41 +196,81 @@
 		}
 		
 		// Edit entity datadesc fields
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
+		// "fieldname" - Field to change
+		// "value" - Value to change on targeted field (type is determined automatically)
 		$edit_field
 		{
 			"targetname"	"test_melon"
 			"fieldname"	"m_clrRender"
 			"value"	"123 123 123"
 		}
-		
+
 		// Get entity origin & angles, assigns it to variables
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
+		// "var" - Variable to assign
 		$getpos { "targetname" "test_melon" "var" "vecPos"}
 		$getang { "targetname" "test_melon" "var" "vecAng"}
 		
 		// Set entity origin & angles
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
+		// "value" - Value to set
 		$setpos { "targetname" "test_melon" "value" "%vecPos"}
 		$setang { "targetname" "test_melon" "value" "%vecAng"}
 		
 		// Trigger a MapHack event
+		// Keys:
+		// "event" - Event name
 		$trigger { "event" "EventTrigger" }
 		
 		// Start a timed MapHack event (stops in EventTimed)
+		// Keys:
+		// "event" - Event name
 		$start { "event" "EventTimed" }
 		
 		// Respawn an entity
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
 		$respawn { "targetname" "test_melon" }
 		
 		// Remove connections
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
 		$remove_connections { "targetname" "test_melon" }
 		
 		// Remove an entity
+		// Keys:
+		// "targetname" - Target an entity by name
+		// "id" - Target an entity by Hammer ID
 		$remove { "targetname" "test_melon" }
 		
 		// Remove all named entities
+		// Keys:
+		// "classname" - Target all entities by classname
 		$remove_all { "classname" "prop_physics" }
 		
 		// Emits a sound
+		// Keys:
+		// "name" - Sound name
+		// "source" - Entity sound source (plays globally by default)
 		$playsound { "name" "Pain.FemaleDefault" }
+		
+		// Test macros
+		// !!! - THESE ARE UNUSED, OBSOLETE, GONE, MAYBERETURNSOMEDAYIDK - !!!
+		//$console { "msg" "%MAPNAME" }
+		//$console { "msg" "%CURTIME" }
+		//$console { "msg" "%MAXCLIENTS" }
+		//$set { "var" "mapName" "value" "%MAPNAME" }
+		//$set { "var" "curTime" "value" "%CURTIME" }
+		//$set { "var" "maxClients" "value" "%MAXCLIENTS" }
 	}
 
 	// Events go here
