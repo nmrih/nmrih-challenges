@@ -37,12 +37,6 @@
 		// For $getpos & $getang test
 		"vecPos" { "type" "string" }
 		"vecAng" { "type" "string" }
-		
-		// For macro test (also tests case sensitivity)
-		// !!! - THESE ARE UNUSED, OBSOLETE, GONE, MAYBERETURNSOMEDAYIDK - !!!
-		//"mapName" { "type" "string" }
-		//"curTime" { "type" "float" }
-		//"maxClients" { "type" "int" }
 	}
 
 	// Test events
@@ -164,6 +158,8 @@
 		// "targetname" - Target an entity by name
 		// "id" - Target an entity by Hammer ID
 		// "input" - Input to fire
+		// "value" - Input value
+		// "type" - Override type, can be "string", "int", "float"
 		$fire { "targetname" "test_melon" "input" "Sleep" }
 		$fire { "targetname" "test_melon" "input" "Wake" }
 		$fire { "targetname" "explosion" "input" "Explode" }
@@ -262,15 +258,6 @@
 		// "name" - Sound name
 		// "source" - Entity sound source (plays globally by default)
 		$playsound { "name" "Pain.FemaleDefault" }
-		
-		// Test macros
-		// !!! - THESE ARE UNUSED, OBSOLETE, GONE, MAYBERETURNSOMEDAYIDK - !!!
-		//$console { "msg" "%MAPNAME" }
-		//$console { "msg" "%CURTIME" }
-		//$console { "msg" "%MAXCLIENTS" }
-		//$set { "var" "mapName" "value" "%MAPNAME" }
-		//$set { "var" "curTime" "value" "%CURTIME" }
-		//$set { "var" "maxClients" "value" "%MAXCLIENTS" }
 	}
 
 	// Events go here
