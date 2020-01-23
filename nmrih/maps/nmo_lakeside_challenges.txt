@@ -27,5 +27,38 @@
 // KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_lakeside_challenge_1"
+	{
+		"Name" "Run of the Mill"
+		"Description" "You won't see this every day."
+		"Objectives"
+		{
+			"0" "16" // Leave the Mill
+			"1" "37" // Enter the cabin via the side door
+			"2" "39" // Find the key to the locked door
+			"3" "33" // Use the generator to enable emergency power
+			"4" "35" // Take propane tank to blow open cellar doors
+			"5" "42" // Reset the mains trip switch
+			"6" "43" // Look for the code to the computer room
+			"7" "44" // No signal! Rotate the satellite dish!
+			"8" "32" // Use the laptop!
+		}
+	}
+
+	"nmo_lakeside_challenge_2"
+	{
+		"Name" "Downtime"
+		"Description" "Can't connect? It's not just you!"
+		"Objectives"
+		{
+			"0" "40" // Find key to the back door
+			"1" "39" // Find the key to the locked door
+			"2" "24" // Telecommunications are down, Restore!
+			"3" "29" // Restore all 3 underground generators
+			"4" "25" // Find an alternative route back to the cabin
+			"5" "26" // Find key to cellar
+			"6" "27" // Reset the mains trip switch
+			"7" "28" // Use the radio!
+		}
+	}
 }

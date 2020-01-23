@@ -40,7 +40,7 @@
 	"nmo_broadway_challenge_2"
 	{
 		"Name"	"Motel Rush"
-		"Description"	"No reservations, don't mind that corpse on the pool."
+		"Description"	"No reservations, mind that corpse on the pool."
 		"Objectives"
 		{
 			"0"	"24"

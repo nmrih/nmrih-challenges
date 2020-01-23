@@ -49,7 +49,7 @@
 	"nmo_toxteth_challenge_2"
 	{
 		"Name"	"Sewer Sweep"
-		"Description"	"Well, if you don't mind the sludge. Look out for sewer mutants!"
+		"Description"	"Well, if you don't mind the sludge..."
 		"Objectives"
 		{
 			"0"	"17"

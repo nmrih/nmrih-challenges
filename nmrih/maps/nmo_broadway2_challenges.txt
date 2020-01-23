@@ -34,7 +34,7 @@
 	"nmo_broadway2_challenge_1"
 	{
 		"Name" "Hoop Dreams"
-		"Description" "Every player dreams of making it.. out of here in one piece"
+		"Description" "Every player dreams of making it.. out of here in one piece."
 		"Objectives"
 		{
 			"0" "16" // Find welder to exit the apartments

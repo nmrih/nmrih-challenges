@@ -62,7 +62,7 @@
 	"nmo_cabin_challenge_3"
 	{
 		"Name"	"Secret Knowledge"
-		"Description"	"The family is the answer, also featuring moving bookcases!"
+		"Description"	"The family is the answer, now featuring moving bookcases!"
 		"Objectives"
 		{
 			"0"	"21"

@@ -10,5 +10,19 @@
 // KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_boardwalk_challenge_1"
+	{
+		"Name" "Walk in the Park"
+		"Description" "Enjoy warm sand, free entertainment, and... who am I kidding?"
+		"Objectives"
+		{
+			"0" "32" // Find the Safehouse.
+			"1" "27" // Find a Key to Unlock the Door.
+			"2" "24" // Use the Radio to Send an SOS.
+			"3" "28" // Survive.
+			"4" "29" // Break Through the Barricade.
+			"5" "31" // Light a Signal Fire.
+			"6" "25" // Secure the Boardwalk. Wait for Evac.
+		}
+	}
 }

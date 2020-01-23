@@ -3,7 +3,7 @@ Challenges
 	"nmo_brooklyn_challenge_1"
 	{
 		"Name" "Core Workout"
-		"Description" "This roadblock won't budge on its own.."
+		"Description" "This roadblock won't budge on its own..."
 		"Objectives"
 		{
 			"0" "22" // Use the key to unlock the cell door

@@ -36,7 +36,7 @@
 	"nmo_fema_challenge_1"
 	{
 		"Name" "Public Hero"
-		"Description" "Help secure the retroviral vaccine and we might return the favor"
+		"Description" "Help secure the retroviral vaccine and we might return the favor."
 		"Objectives"
 		{
 			"0" "24" // Break out of the decontamination area

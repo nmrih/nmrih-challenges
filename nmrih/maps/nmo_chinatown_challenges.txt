@@ -10,7 +10,7 @@
 	"nmo_chinatown_challenge_1"
 	{
 		"Name"	"Cutting Corners"
-		"Description" "Make your way through the map using shortcuts"
+		"Description" "Make your way through the map using shortcuts."
 		"Objectives"
 		{
 			"0" "29"

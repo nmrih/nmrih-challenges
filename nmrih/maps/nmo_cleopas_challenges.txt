@@ -17,5 +17,41 @@
 // KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_cleopas_challenge_1"
+	{
+		"Name" "The Plan"
+		"Description" "How nice of someone to lay down these objectives for us."
+		"Objectives"
+		{
+			"0" "27" // Find some tnt to get through the alley gate.
+			"1" "31" // Find 4 boards to get across the electrified water.
+			"2" "36" // Blast through alley wall.
+			"3" "38" // Get to the next alley.
+			"4" "35" // Find a ladder to get over the alley gate.
+			"5" "40" // Find welder to get back alley gate open.
+			"6" "33" // Use ladder to get into Samco store.
+			"7" "34" // Use welder to break into the store.
+			"8" "30" // Follow the whiteboard objective.
+			"9" "39" // Find some pliers to cut the lock, you have 3 minutes to get extracted!
+		}
+	}
+
+	"nmo_cleopas_challenge_2"
+	{
+		"Name" "Trespasser!"
+		"Description" "People might not like it when you break in their house."
+		"Objectives"
+		{
+			"0" "29" // Find some tnt to get through the alley gate.
+			"1" "32" // Find lever to turn power off.
+			"2" "37" // Go through the house and break through the front.
+			"3" "38" // Get to the next alley.
+			"4" "35" // Find a ladder to get over the alley gate.
+			"5" "40" // Find welder to get back alley gate open.
+			"6" "33" // Use ladder to get into Samco store.
+			"7" "34" // Use welder to break into the store.
+			"8" "30" // Follow the whiteboard objective.
+			"9" "39" // Find some pliers to cut the lock, you have 3 minutes to get extracted!
+		}
+	}
 }

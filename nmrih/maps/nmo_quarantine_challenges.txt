@@ -17,5 +17,26 @@
 // KV names are identifiers, and will be saved in records!
 "Challenges"
 {
-	// TODO
+	"nmo_quarantine_challenge_1"
+	{
+		"Name" "Containment Loss"
+		"Description" "Oopsies, we made a mess."
+		"Objectives"
+		{
+			"0" "33" // Escape the alley.
+			"1" "30" // Find a shovel and dig for fuel at the make-shift grave-yard.
+			"2" "34" // Fuel the generator and turn it on.
+			"3" "40" // Wait for the rollup door to open.
+			"4" "41" // Get into the sewers
+			"5" "36" // Find the key to the maintenance room.
+			"6" "37" // Find the missing crank and unflood the maintenance room!
+			"7" "35" // Use the radio!
+			"8" "43" // Take the walkie talkie.
+			"9" "38" // Escape the sewers.
+			"10" "39" // Close the open quarantine entry gate to gain access to the inner quarantine!
+			"11" "42" // Get into the inner quarantine before the failsafe activates!
+			"12" "44" // Activate the siren when ready.
+			"13" "45" // Survive for 2 minutes
+		}
+	}
 }
