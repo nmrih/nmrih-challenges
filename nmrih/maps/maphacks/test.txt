@@ -37,6 +37,9 @@
 		// For $getpos & $getang test
 		"vecPos" { "type" "string" }
 		"vecAng" { "type" "string" }
+		
+		// Pre-entity variable test
+		"pre_iTest" { "type" "int" "value" "69" }
 	}
 
 	// Test events
@@ -78,6 +81,101 @@
 		{
 			"type"	"EVENT_TRIGGER"
 		}
+		
+		// Test issue #1087
+		"EventTestIssue1087"
+		{
+			"type"		"EVENT_OUTPUT"
+			"targetname" 	"stick"
+			"output"	"OnAwakened"
+		}
+	}
+
+	// Pre-entity field, run on LevelInit, directly fiddles with entdata buffer!!!
+	// Use this for stripping out entities before map load or to change classnames
+	// Note that this is completely separate from maphack's runtime entities field, events can't be triggered, started or stopped here!
+	// !! - Only available function keys are:
+	// $edit, $edit_all, $modify, $remove, $remove_all,
+	// $if, $set, $increment, $decrement, $rand
+	"pre_entities"
+	{
+		// Creating an entity here plops it at the back of entdata buffer
+		"prop_physics"
+		{
+			"targetname"	"test_melon"
+			"origin"	"0 0 0"
+			"angles"	"0 0 0"
+			"keyvalues"
+			{
+				"model"			"models/props_junk/watermelon01.mdl"
+				"rendercolor"	"%clrTest"
+			}
+		}
+		
+		// These edit entdata directly
+		$edit
+		{
+			"targetname"	"test_melon"
+			"keyvalues"
+			{
+				"modelscale"		"4.0"
+			}
+		}
+		
+		// Example, change sky name
+		$edit_all
+		{
+			"classname" "worldspawn"
+			"keyvalues"
+			{
+				"skyname" "sky_borealis01"
+			}
+		}
+		
+		// Another example, turn all props into zombies
+		$edit_all
+		{
+			"classname" "prop_physics"
+			"keyvalues"
+			{
+				"classname"	"npc_nmrih_shamblerzombie"
+			}
+		}
+		
+		// Test $modify
+		// FIXME: insert and remove not working in 1.10.1-rc4 :((
+		$modify
+		{
+			"match"
+			{
+				"classname" "npc_nmrih_shamblerzombie"
+			}
+			
+			"replace"
+			{
+				"rendercolor" "0 0 0"
+			}
+		}
+		
+		$remove_all
+		{
+			"classname" "random_spawner"
+		}
+		
+		// Control flow also works in pre-entity
+		$if
+		{
+			"cond" "pre_iTest == 69"
+			"entities" // bit ambiguous, entities field here is run here as if it's "pre_entities"
+			{
+				$console { "warning" "pre entity $if test passed" }
+			}
+		}
+		
+		$set { "var" "pre_iTest" "value" "2" }
+		$increment { "var" "pre_iTest" }
+		$decrement { "var" "pre_iTest" }
+		$rand { "var" "pre_iTest" "rand_min" "%randMin" "rand_max" "%randMax" }
 	}
 
 	// Test main entities field, run on load
@@ -93,6 +191,19 @@
 			{
 				"model"			"models/props_junk/watermelon01.mdl"
 				"rendercolor"	"%clrTest" // '%' = reference a MapHacks variable
+			}
+		}
+		
+		// Spawn another test melon somewhere but this time in multiplayer
+		"prop_physics_multiplayer"
+		{
+			"targetname"	"test_melon2"
+			"origin"	"0 0 0"
+			"angles"	"0 0 0"
+			"keyvalues"
+			{
+				"model"			"models/props_junk/watermelon01.mdl"
+				"rendercolor"	"%clrTest"
 			}
 		}
 		
@@ -115,8 +226,9 @@
 		$if
 		{
 			"cond" "iTest == 42"
-			"entities"
+			"entities" // this field will be run as if it was another entities field, it can be used for control flow eg. by nesting more $ifs
 			{
+				// all function keys will also work here!
 				$console { "warning" "$if test passed" }
 			}
 		}
@@ -158,8 +270,8 @@
 		// "targetname" - Target an entity by name
 		// "id" - Target an entity by Hammer ID
 		// "input" - Input to fire
-		// "value" - Input value
-		// "type" - Override type, can be "string", "int", "float"
+		// "value" - Value to set
+		// "type" - Type override (available types: int, float, string)
 		$fire { "targetname" "test_melon" "input" "Sleep" }
 		$fire { "targetname" "test_melon" "input" "Wake" }
 		$fire { "targetname" "explosion" "input" "Explode" }
@@ -202,6 +314,35 @@
 			"targetname"	"test_melon"
 			"fieldname"	"m_clrRender"
 			"value"	"123 123 123"
+		}
+		
+		// Advanced key value manipulation ($edit_all on crack), inspired by Stripper:Source's "modify"
+		// Keys:
+		// "match" - Match entities by these keys and values
+		// "replace" - Replace values on matched entities
+		// "insert" - Insert new keyvalues on matched entities
+		// "delete" - Remove existing keyvalues on matched entities
+		$modify
+		{
+			"match"
+			{
+				"classname" "npc_nmrih_shamblerzombie"
+			}
+			
+			"replace"
+			{
+				"rendercolor" "0 0 0"
+			}
+			
+			"insert"
+			{
+				"modelscale" "4.0"
+			}
+			
+			"delete"
+			{
+				"modelscale" "4.0"
+			}
 		}
 
 		// Get entity origin & angles, assigns it to variables
@@ -258,6 +399,11 @@
 		// "name" - Sound name
 		// "source" - Entity sound source (plays globally by default)
 		$playsound { "name" "Pain.FemaleDefault" }
+		
+		// Test issue #1087
+		"item_glowstick" { "targetname" "stick" }
+		$fire { "targetname" "stick"	"input" "Sleep" }
+		$fire { "targetname" "stick"	"input" "Wake" }
 	}
 
 	// Events go here
@@ -301,5 +447,12 @@
 		$console { "msg" "%recursion" }
 		$increment { "var" "recursion" }
 		$trigger { "event" "EventRecursiveTest" }
+	}
+	
+	// Test issue #1087
+	"EventTestIssue1087"
+	{
+		$playsound { "name" "Pain.FemaleDefault" }
+		$console { "warning" "test issue #1087" }
 	}
 }
