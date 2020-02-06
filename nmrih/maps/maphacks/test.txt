@@ -81,14 +81,6 @@
 		{
 			"type"	"EVENT_TRIGGER"
 		}
-		
-		// Test issue #1087
-		"EventTestIssue1087"
-		{
-			"type"		"EVENT_OUTPUT"
-			"targetname" 	"stick"
-			"output"	"OnAwakened"
-		}
 	}
 
 	// Pre-entity field, run on LevelInit, directly fiddles with entdata buffer!!!
@@ -168,7 +160,14 @@
 			"cond" "pre_iTest == 69"
 			"entities" // bit ambiguous, entities field here is run here as if it's "pre_entities"
 			{
-				$console { "warning" "pre entity $if test passed" }
+				$edit_all
+				{
+					"classname" "prop_physics"
+					"keyvalues"
+					{
+						"modelscale" "4.0"
+					}
+				}
 			}
 		}
 		
@@ -322,6 +321,7 @@
 		// "replace" - Replace values on matched entities
 		// "insert" - Insert new keyvalues on matched entities
 		// "delete" - Remove existing keyvalues on matched entities
+		// "keyvalues" - Traditional keyvalues block ($edit) on matched entities
 		$modify
 		{
 			"match"
@@ -341,6 +341,12 @@
 			
 			"delete"
 			{
+				"modelscale" "4.0"
+			}
+			
+			"keyvalues"
+			{
+				"rendercolor" "0 0 0"
 				"modelscale" "4.0"
 			}
 		}
@@ -399,11 +405,6 @@
 		// "name" - Sound name
 		// "source" - Entity sound source (plays globally by default)
 		$playsound { "name" "Pain.FemaleDefault" }
-		
-		// Test issue #1087
-		"item_glowstick" { "targetname" "stick" }
-		$fire { "targetname" "stick"	"input" "Sleep" }
-		$fire { "targetname" "stick"	"input" "Wake" }
 	}
 
 	// Events go here
@@ -447,12 +448,5 @@
 		$console { "msg" "%recursion" }
 		$increment { "var" "recursion" }
 		$trigger { "event" "EventRecursiveTest" }
-	}
-	
-	// Test issue #1087
-	"EventTestIssue1087"
-	{
-		$playsound { "name" "Pain.FemaleDefault" }
-		$console { "warning" "test issue #1087" }
 	}
 }
