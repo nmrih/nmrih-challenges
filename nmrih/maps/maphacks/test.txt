@@ -135,15 +135,24 @@
 		}
 		
 		// Test $modify
-		// FIXME: insert and remove not working in 1.10.1-rc4 :((
 		$modify
 		{
+			"insert"
+			{
+				"disableshadows" "1"
+			}
+			
 			"match"
 			{
 				"classname" "npc_nmrih_shamblerzombie"
 			}
 			
 			"replace"
+			{
+				"rendercolor" "0 0 0"
+			}
+			
+			"delete"
 			{
 				"rendercolor" "0 0 0"
 			}
