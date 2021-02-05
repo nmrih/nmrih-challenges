@@ -2,11 +2,6 @@
 
 "MapHack"
 {
-	"includes"
-	{
-		"file"	"maps/maphacks/challenges/include/nmo_broadway_shared.txt"
-	}
-
 	"entities"
 	{
 		$remove_connections { "targetname" "1case_objb" }
