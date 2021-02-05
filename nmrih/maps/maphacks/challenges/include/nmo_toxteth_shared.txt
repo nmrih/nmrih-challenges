@@ -1,25 +1,9 @@
 "MapHack"
 {
-	"events"
-	{
-		"SpawnEvacTrigger"
-		{
-			"type" "EVENT_OUTPUT"
-			"targetname" "obj_finale_helicopter_path3"
-			"output" "OnPass"
-		}
-	}
-
 	"entities"
 	{
 		$remove_connections { "targetname" "badass_door_case" }
 
-		// Used for extraction
-		"nmrih_game_state"
-		{
-			"targetname" "game_state"
-		}
-		
 		// Always unlock the weapons stash
 		$edit
 		{
@@ -32,36 +16,5 @@
 				}
 			}
 		}
-	}
-	
-	// Spawn a trigger near helicopter for a fast evac
-	"SpawnEvacTrigger"
-	{
-		"instant_trigger"
-		{
-			"origin" "-800 -5144 100"
-			"angles" "0 0 0"
-			"targetname" "trig_evac"
-			"keyvalues"
-			{
-				"allowPlayers" "1"
-				"radius" "65"
-				"noclear" "1"
-				
-				// Fire I/O chain to gamestate ent
-				"connections"
-				{
-					"OnTrigger" "game_state,ExtractPlayer,,0,-1"
-				}
-			}
-		}
-		
-		// Remove this trigger when the helicopter leaves
-		$trigger { "event" "RemoveEvacTrigger" "delay" "61.0" }
-	}
-	
-	"RemoveEvacTrigger"
-	{
-		$remove { "targetname" "trig_evac" } 
 	}
 }
