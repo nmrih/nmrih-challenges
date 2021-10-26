@@ -1,4 +1,4 @@
-// MapHacks use KeyValues syntax
+// MapHack uses KeyValues syntax
 // Root key must be named as maphack (case insensitive)
 "MapHack"
 {
@@ -69,7 +69,6 @@
 		}
 		
 		// MAPHACK_EVENT_GAMEEVENT
-		// (ambiguous naming ftw :()
 		"EventGameEvent"
 		{
 			"type"	"EVENT_GAMEEVENT"
@@ -83,9 +82,9 @@
 		}
 	}
 
-	// Pre-entity field, run on LevelInit, directly fiddles with entdata buffer!!!
+	// Pre-entity field, run on LevelInit, directly fiddles with entdata buffer!
 	// Use this for stripping out entities before map load or to change classnames
-	// Note that this is completely separate from maphack's runtime entities field, events can't be triggered, started or stopped here!
+	// Note that this is completely separate from MapHack's runtime entities field, events can't be triggered, started or stopped here!
 	// !! - Only available function keys are:
 	// $edit, $edit_all, $modify, $remove, $remove_all,
 	// $if, $set, $increment, $decrement, $rand
@@ -94,11 +93,23 @@
 		// Creating an entity here plops it at the back of entdata buffer
 		"prop_physics"
 		{
-			"targetname"	"test_melon"
+			"targetname"	"pre_test_melon"
 			"origin"	"0 0 0"
 			"angles"	"0 0 0"
+			"model"			"models/props_junk/watermelon01.mdl"
+			"rendercolor"	"%clrTest" // '%' = reference a MapHack variable
+		}
+		
+		// First version of MapHack required "keyvalues" field for new entities 
+		// As of 1.12, it's optional
+		"prop_physics"
+		{
+			"origin"	"0 0 0"
+			"angles"	"0 0 0"
+			
 			"keyvalues"
 			{
+				"targetname"	"pre_test_melon2"
 				"model"			"models/props_junk/watermelon01.mdl"
 				"rendercolor"	"%clrTest"
 			}
@@ -167,7 +178,9 @@
 		$if
 		{
 			"cond" "pre_iTest == 69"
-			"entities" // bit ambiguous, entities field here is run here as if it's "pre_entities"
+			
+			// Bit ambiguous, entities field here is run here as if it's "pre_entities"
+			"entities"
 			{
 				$edit_all
 				{
@@ -190,28 +203,34 @@
 	"entities"
 	{
 		// Spawn a test melon somewhere
+		// First version of MapHack required "keyvalues" field for new entities 
+		// As of 1.12, it's optional
 		"prop_physics"
 		{
 			"targetname"	"test_melon"
 			"origin"	"0 0 0"
 			"angles"	"0 0 0"
-			"keyvalues"
+			"keyvalues" // Still works!
 			{
 				"model"			"models/props_junk/watermelon01.mdl"
-				"rendercolor"	"%clrTest" // '%' = reference a MapHacks variable
+				"rendercolor"	"%clrTest" // '%' = reference a MapHack variable
 			}
 		}
 		
 		// Spawn another test melon somewhere but this time in multiplayer
+		// ...and without "keyvalues"!
 		"prop_physics_multiplayer"
 		{
 			"targetname"	"test_melon2"
 			"origin"	"0 0 0"
 			"angles"	"0 0 0"
-			"keyvalues"
+			"model"			"models/props_junk/watermelon01.mdl"
+			"rendercolor"	"%clrTest"
+			
+			// You can use "connections" as before
+			"connections"
 			{
-				"model"			"models/props_junk/watermelon01.mdl"
-				"rendercolor"	"%clrTest"
+				"OnAwakened" "test_melon2,Break,,0,-1"
 			}
 		}
 		
@@ -221,10 +240,7 @@
 			"targetname" "explosion"
 			"origin" "0 0 0"
 			"angles" "0 0 0"
-			"keyvalues"
-			{
-				"magnitude"	"1337"
-			}
+			"magnitude"	"1337"
 		}
 
 		// Check for variable condition
@@ -234,9 +250,11 @@
 		$if
 		{
 			"cond" "iTest == 42"
-			"entities" // this field will be run as if it was another entities field, it can be used for control flow eg. by nesting more $ifs
+			
+			// This field will be run as if it was another entities field, it can be used for control flow eg. by nesting more $ifs
+			"entities"
 			{
-				// all function keys will also work here!
+				// All function keys will also work here!
 				$console { "warning" "$if test passed" }
 			}
 		}
@@ -257,7 +275,7 @@
 		// "var" - Variable to decrement
 		$decrement { "var" "iTest" }
 		
-		// Set a variable to a random value (also test maphack var ref)
+		// Set a variable to a random value
 		// Keys:
 		// "var" - Chosen variable
 		// "rand_min" - Min random value
@@ -324,7 +342,7 @@
 			"value"	"123 123 123"
 		}
 		
-		// Advanced key value manipulation ($edit_all on crack), inspired by Stripper:Source's "modify"
+		// Advanced key value manipulation, inspired by Stripper:Source's "modify"
 		// Keys:
 		// "match" - Match entities by these keys and values
 		// "replace" - Replace values on matched entities
@@ -381,7 +399,7 @@
 		// "event" - Event name
 		$trigger { "event" "EventTrigger" }
 		
-		// Start a timed MapHack event (stops in EventTimed)
+		// Start a timed MapHack event
 		// Keys:
 		// "event" - Event name
 		$start { "event" "EventTimed" }
@@ -414,6 +432,13 @@
 		// "name" - Sound name
 		// "source" - Entity sound source (plays globally by default)
 		$playsound { "name" "Pain.FemaleDefault" }
+		
+		// Runs a VScript
+		// Keys:
+		// "run" - Run a script from given string (use escape characters for quotes!)
+		// "file" - Run a script from file in scripts/vscripts directory
+		$script { "run" "printl(Convars.GetStr(\"sv_difficulty\"))" }
+		$script { "file" "test_ent.nut" }
 	}
 
 	// Events go here
@@ -447,12 +472,14 @@
 		$console { "msg" "EventGameEvent" }
 	}
 
-	"EventUnregistered" // MapHack allows unregistered events, uses default properties (trigger)
+	// MapHack allows unregistered events, uses default properties (trigger)
+	"EventUnregistered"
 	{
 		$console { "msg" "EventUnregistered" }
 	}
 	
-	"EventRecursiveTest" // We got a safety net for this, don't go too far
+	// We got a safety net for this, don't go too far
+	"EventRecursiveTest"
 	{
 		$console { "msg" "%recursion" }
 		$increment { "var" "recursion" }
