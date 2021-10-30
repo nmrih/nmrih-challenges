@@ -44,6 +44,7 @@
 		}
 
 		// Complete the battery objective quickly
+		$remove_connections { "targetname" "obj_carbattery_trigger" }
 		$edit
 		{
 			"targetname" "obj_carbattery_trigger"
@@ -52,6 +53,17 @@
 				"connections"
 				{
 					"OnTrigger" "obj_carbattery_boundary,ObjectiveComplete,,0,1"
+
+					"OnTrigger" "zse,InputEnable,,0,1"
+					"OnTrigger" "!activator,Kill,,0,1"
+					"OnTrigger" "obj_carbattery_outline,Alpha,255,0,1"
+					"OnTrigger" "template_road_initial,Enable,,0,1"
+
+					"OnTrigger" "obj_carbattery_snd_start,PlaySound,,0.5,1"
+					"OnTrigger" "obj_carbattery_snd_loop,PlaySound,,2.5,1"
+
+					"OnTrigger" "obj_carbattery_relay,Trigger,,5,1"
+					"OnTrigger" "obj_carbattery_snd_start,Kill,,5,1"
 				}
 			}
 		}
