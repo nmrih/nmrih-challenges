@@ -11,7 +11,11 @@
 	// Test precache
 	"precache"
 	{
-		"sound"	"Pain.FemaleDefault"
+		"model"		"models/props_junk/watermelon01.mdl"
+		"material"	"matsys_regressiontest/background"
+		"sound"		"Event.WatermelonRescue"
+		"particle"	"LLtest"
+		"entity"	"_firesmoke"
 	}
 
 	// Test variables
@@ -301,6 +305,19 @@
 		$fire { "targetname" "test_melon" "input" "Sleep" }
 		$fire { "targetname" "test_melon" "input" "Wake" }
 		$fire { "targetname" "explosion" "input" "Explode" }
+		$fire
+		{
+			"targetname" "test_melon"
+			"input" "Color"
+			"value" "255 255 255"
+		}
+		$fire
+		{
+			"targetname" "test_melon"
+			"input" "IgniteLifetime"
+			"value" "5.0"
+			"type"	"float"
+		}
 		
 		// Set KeyValues for existing entity
 		// Keys:
@@ -431,7 +448,12 @@
 		// Keys:
 		// "name" - Sound name
 		// "source" - Entity sound source (plays globally by default)
-		$playsound { "name" "Pain.FemaleDefault" }
+		$playsound { "name" "Event.WatermelonRescue" }
+		$playsound
+		{
+			"name" "Event.WatermelonRescue"
+			"source"	"explosion"
+		}
 		
 		// Runs a VScript
 		// Keys:
