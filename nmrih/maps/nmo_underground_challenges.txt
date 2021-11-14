@@ -66,4 +66,16 @@
 			"12" "38" // Wait for the helicopter!
 		}
 	}
+	"nmo_underground_challenge_3"
+	{
+		"Name" "Average melee appreciator"
+		"Description" "Complete the map without guns and explosives!"
+		"MapHack"
+		{
+			"includes"
+			{
+				"file" "maps/maphacks/challenges/nmo_underground_challenge_3.txt"
+			}
+		}
+	}
 }
