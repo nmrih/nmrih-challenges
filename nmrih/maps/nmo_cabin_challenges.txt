@@ -115,7 +115,7 @@
 		{
 			"includes"
 			{
-				"file"	"maps/maphacks/challenges/blitz/nmo_cabin_blitz_1.txt"
+				"file"	"maps/maphacks/challenges/nmo_cabin_blitz_1.txt"
 			}
 		}
 	}
