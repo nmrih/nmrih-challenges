@@ -29,4 +29,44 @@
 			}
 		}
 	}
+	
+	"nmo_chinatown_blitz_1"
+	{
+		"Name"	"Blitz: Rush Hour"
+		"Description" "In Blitz mode, gain more time by completing objectives!"
+		"Blitz"	"1"
+		"Objectives"
+		{
+			"0" "29"
+			"1"	"28"
+			"2"	"36"
+			"3"	"35"
+			"4"	"26"
+			"5"	"34"
+		}
+		
+		"BlitzParams"
+		{
+			"InitialTime"	"180" // Start at 3 minutes
+			
+			// Objective timer additions
+			"DefaultObjAdd" "30" // By default, add 30s
+			"ObjectiveTimerAdd"
+			{
+				"28"	"90"
+				"36"	"60"
+				"35"	"60"
+				"26"	"120"
+				"34"	"0"
+			}
+		}
+
+		"MapHack"
+		{
+			"includes"
+			{
+				"file"	"maps/maphacks/challenges/nmo_chinatown_blitz_1.txt"
+			}
+		}
+	}
 }
