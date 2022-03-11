@@ -414,7 +414,9 @@
 		// Trigger a MapHack event
 		// Keys:
 		// "event" - Event name
+		// "delay" - Delay event by this many seconds
 		$trigger { "event" "EventTrigger" }
+		$trigger { "event" "EventTriggerDelay" "delay" "5.0" }
 		
 		// Start a timed MapHack event
 		// Keys:
@@ -459,7 +461,7 @@
 		// Keys:
 		// "run" - Run a script from given string (use escape characters for quotes!)
 		// "file" - Run a script from file in scripts/vscripts directory
-		$script { "run" "printl(Convars.GetStr(\"sv_difficulty\"))" }
+		$script { "run" "printl(\"MapHack \" + Version.GetVersionLabel() + \" & \" + _version_)" }
 		$script { "file" "test_ent.nut" }
 	}
 
@@ -506,5 +508,10 @@
 		$console { "msg" "%recursion" }
 		$increment { "var" "recursion" }
 		$trigger { "event" "EventRecursiveTest" }
+	}
+	
+	"EventTriggerDelay"
+	{
+		$console { "msg" "EventTriggerDelay" }
 	}
 }
