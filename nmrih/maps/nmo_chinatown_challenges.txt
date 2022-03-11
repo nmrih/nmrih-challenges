@@ -47,14 +47,14 @@
 		
 		"BlitzParams"
 		{
-			"InitialTime"	"180" // Start at 3 minutes
+			"InitialTime"	"90" // Start at 1:30 minutes
 			
 			// Objective timer additions
 			"DefaultObjAdd" "30" // By default, add 30s
 			"ObjectiveTimerAdd"
 			{
 				"28"	"90"
-				"36"	"60"
+				"36"	"90"
 				"35"	"60"
 				"26"	"120"
 				"34"	"0"
