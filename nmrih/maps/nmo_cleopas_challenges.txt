@@ -19,8 +19,8 @@
 {
 	"nmo_cleopas_challenge_1"
 	{
-		"Name" "The Plan"
-		"Description" "How nice of someone to lay down these objectives for us."
+		"Name" "#Challenge_Name_nmo_cleopas_challenge_1"
+		"Description" "#Challenge_Desc_nmo_cleopas_challenge_1"
 		"Objectives"
 		{
 			"0" "27" // Find some tnt to get through the alley gate.
@@ -38,8 +38,8 @@
 
 	"nmo_cleopas_challenge_2"
 	{
-		"Name" "Trespasser!"
-		"Description" "People might not like it when you break in their house."
+		"Name" "#Challenge_Name_nmo_cleopas_challenge_2"
+		"Description" "#Challenge_Desc_nmo_cleopas_challenge_2"
 		"Objectives"
 		{
 			"0" "29" // Find some tnt to get through the alley gate.

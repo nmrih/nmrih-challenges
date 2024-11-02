@@ -18,8 +18,8 @@
 {
 	"nmo_shelter_challenge_1"
 	{
-		"Name" "There Be No Shelter Here!"
-		"Description" "The thin line between entertainment and war."
+		"Name" "#Challenge_Name_nmo_shelter_challenge_1"
+		"Description" "#Challenge_Desc_nmo_shelter_challenge_1"
 		"Objectives"
 		{
 			"0" "27" // Proceed to the main hall

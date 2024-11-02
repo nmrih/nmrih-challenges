@@ -25,8 +25,8 @@
 {
 	"nmo_underground_challenge_1"
 	{
-		"Name" "Commuter Hell"
-		"Description" "You won't get far..."
+		"Name" "#Challenge_Name_nmo_underground_challenge_1"
+		"Description" "#Challenge_Desc_nmo_underground_challenge_1"
 		"Objectives"
 		{
 			"0" "20" // Find a way to open the door!
@@ -47,8 +47,8 @@
 
 	"nmo_underground_challenge_2"
 	{
-		"Name" "Push the Cart"
-		"Description" "We must push little cart!"
+		"Name" "#Challenge_Name_nmo_underground_challenge_2"
+		"Description" "#Challenge_Desc_nmo_underground_challenge_2"
 		"Objectives"
 		{
 			"0" "20" // Find a way to open the door!
@@ -68,8 +68,8 @@
 	}
 	"nmo_underground_challenge_3"
 	{
-		"Name" "Average melee appreciator"
-		"Description" "Complete the map without guns and explosives!"
+		"Name" "#Challenge_Name_nmo_underground_challenge_3"
+		"Description" "#Challenge_Desc_nmo_underground_challenge_3"
 		"MapHack"
 		{
 			"includes"

@@ -21,8 +21,8 @@
 {
 	"nmo_zephyr_challenge_1"
 	{
-		"Name" "Way of the Zephyrs"
-		"Description" "Hearing human voice is so refreshing."
+		"Name" "#Challenge_Name_nmo_zephyr_challenge_1"
+		"Description" "#Challenge_Desc_nmo_zephyr_challenge_1"
 		"Objectives"
 		{
 			"0" "27" // Find the code and escape the office building
@@ -40,8 +40,8 @@
 
 	"nmo_zephyr_challenge_2"
 	{
-		"Name" "Lack of Maintenance"
-		"Description" "What's up with that engineer? Nothing seems to be working."
+		"Name" "#Challenge_Name_nmo_zephyr_challenge_2"
+		"Description" "#Challenge_Desc_nmo_zephyr_challenge_2"
 		"Objectives"
 		{
 			"0" "27" // Find the code and escape the office building

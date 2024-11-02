@@ -22,8 +22,8 @@
 {
 	"nmo_rockpit_challenge_1"
 	{
-		"Name"	"Power Trip"
-		"Description" "We know this place inside out, it'll be a walk in the park."
+		"Name"	"#Challenge_Name_nmo_rockpit_challenge_1"
+		"Description" "#Challenge_Desc_nmo_rockpit_challenge_1"
 		"Objectives"
 		{
 			"0" "31"
@@ -48,8 +48,8 @@
 
 	"nmo_rockpit_challenge_2"
 	{
-		"Name"	"Under Stress"
-		"Description" "Complete a round with the longest possible objective chain."
+		"Name"	"#Challenge_Name_nmo_rockpit_challenge_2"
+		"Description" "#Challenge_Desc_nmo_rockpit_challenge_2"
 		"Objectives"
 		{
 			"0" "31"
@@ -71,8 +71,8 @@
 
 	"nmo_rockpit_blitz_1"
 	{
-		"Name"	"Blitz: Power Trip"
-		"Description" "In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_rockpit_blitz_1"
+		"Description" "#Challenge_Desc_nmo_rockpit_blitz_1"
 		"Blitz"	"1"
 		"Objectives"
 		{

@@ -16,8 +16,8 @@
 {
 	"nmo_broadway_challenge_1"
 	{
-		"Name"	"Cinema Premiere"
-		"Description"	"You're late to the premiere! Make your way through the crowds, and catch the train home!"
+		"Name"	"#Challenge_Name_nmo_broadway_challenge_1"
+		"Description"	"#Challenge_Desc_nmo_broadway_challenge_1"
 		"Objectives"
 		{
 			"0"	"28"
@@ -38,8 +38,8 @@
 	
 	"nmo_broadway_challenge_2"
 	{
-		"Name"	"Motel Rush"
-		"Description"	"No reservations, mind that corpse on the pool."
+		"Name"	"#Challenge_Name_nmo_broadway_challenge_2"
+		"Description"	"#Challenge_Desc_nmo_broadway_challenge_2"
 		"Objectives"
 		{
 			"0"	"24"
@@ -60,8 +60,8 @@
 	
 	"nmo_broadway_blitz_1"
 	{
-		"Name"	"Blitz: Cinema Premiere"
-		"Description"	"In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_broadway_blitz_1"
+		"Description"	"#Challenge_Desc_nmo_broadway_blitz_1"
 		"Blitz"	"1"
 		"Objectives"
 		{
@@ -95,8 +95,8 @@
 	
 	"nmo_broadway_blitz_2"
 	{
-		"Name"	"Blitz: Motel Rush"
-		"Description"	"In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_broadway_blitz_2"
+		"Description"	"#Challenge_Desc_nmo_broadway_blitz_2"
 		"Blitz"	"1"
 		"Objectives"
 		{

@@ -21,8 +21,8 @@
 {
 	"nmo_toxteth_challenge_1"
 	{
-		"Name"	"Graveyard Dash"
-		"Description"	"I suggest cutting through the graveyard..."
+		"Name"	"#Challenge_Name_nmo_toxteth_challenge_1"
+		"Description"	"#Challenge_Desc_nmo_toxteth_challenge_1"
 		"Objectives"
 		{
 			"0"	"17"
@@ -48,8 +48,8 @@
 	
 	"nmo_toxteth_challenge_2"
 	{
-		"Name"	"Sewer Sweep"
-		"Description"	"Well, if you don't mind the sludge..."
+		"Name"	"#Challenge_Name_nmo_toxteth_challenge_2"
+		"Description"	"#Challenge_Desc_nmo_toxteth_challenge_2"
 		"Objectives"
 		{
 			"0"	"17"
@@ -76,8 +76,8 @@
 	
 	"nmo_toxteth_blitz_1"
 	{
-		"Name"	"Blitz: Graveyard Dash"
-		"Description"	"We can't afford much time so be quick! In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_toxteth_blitz_1"
+		"Description"	"#Challenge_Desc_nmo_toxteth_blitz_1"
 		"Blitz"	"1"
 		"Objectives"
 		{
@@ -116,8 +116,8 @@
 	
 	"nmo_toxteth_blitz_2"
 	{
-		"Name"	"Blitz: Sewer Sweep"
-		"Description"	"You do realize you're walking on other people's excrement right? In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_toxteth_blitz_2"
+		"Description"	"#Challenge_Desc_nmo_toxteth_blitz_2"
 		"Blitz"	"1"
 		"Objectives"
 		{

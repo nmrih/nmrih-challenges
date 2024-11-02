@@ -33,8 +33,8 @@
 {
 	"nmo_broadway2_challenge_1"
 	{
-		"Name" "Hoop Dreams"
-		"Description" "Every player dreams of making it.. out of here in one piece."
+		"Name" "#Challenge_Name_nmo_broadway2_challenge_1"
+		"Description" "#Challenge_Desc_nmo_broadway2_challenge_1"
 		"Objectives"
 		{
 			"0" "16" // Find welder to exit the apartments
@@ -53,8 +53,8 @@
 
 	"nmo_broadway2_challenge_2"
 	{
-		"Name" "On a Rail"
-		"Description" "Looks like our rescue helicopter is no more. Escape via the train!"
+		"Name" "#Challenge_Name_nmo_broadway2_challenge_2"
+		"Description" "#Challenge_Desc_nmo_broadway2_challenge_2"
 		"Objectives"
 		{
 			"0" "16" // Find welder to exit the apartments
@@ -76,8 +76,8 @@
 
 	"nmo_broadway2_challenge_3"
 	{
-		"Name" "Tank Me Later"
-		"Description" "The store entrance is locked, can you make a new one?"
+		"Name" "#Challenge_Name_nmo_broadway2_challenge_3"
+		"Description" "#Challenge_Desc_nmo_broadway2_challenge_3"
 		"Objectives"
 		{
 			"0" "16" // Find welder to exit the apartments

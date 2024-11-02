@@ -1,0 +1,68 @@
+// 754: StartGo - Leave the safehouse
+// 1119: StartGo(Alt) - Leave the safehouse
+// 388: StartBreakPlanks - Find a way into the cabin
+// 58: StartUnlockCellar - Find a welder and open the cellar door
+// 103: CellarToCabin - Navigate through the cellar
+// 106: UnlockBasementExit - Find basement key and unlock the door
+// 389: CellarToCabin(Elec) - Navigate through the cellar
+// 173: UnlockGarage(Elec) - Staircase is blocked, find key to the fuse box room
+// 104: DisableElec - Turn off power to the electric fence in the cellar
+// 478: CellarToCourtyard - Go back to the cellar, find a way into the cabin
+// 887: WatersideToCabin - Enter the cabin through the dock
+// 888: WatersideToCabin(Door) - Enter the cabin through the dock
+// 448: CellarToMainyard - Navigate through the cellar
+// 449: VanBattery - Find missing battery to power up the van
+// 568: DestroyGarageDoor - Set off IED at the garage door
+// 569: GarageToCabin - Enter the cabin through the garage
+// 886: GarageToLaundry - Staircase is blocked, go through the laundry room
+// 852: CellarToCabin(Alt) - Navigate through the cellar
+// 853: UnlockBasementExit(Alt) - Find basement key and unlock the door
+// 820: WatersideExplosive - Find propane tank to blast through the door
+// 418: GoUpRoute - Go through the upper floor of the cabin
+// 419: FindTheRadio - Use a welder to access the radio room
+// 329: RadioFindBattery - The radio has no power, find a battery
+// 59: CallExtraction - Use the radio to call for help
+// 985: Flare - Signal extraction with a flare
+
+"Challenges"
+{
+	"nmo_shoreline_challenge_1"
+	{
+		"Name"	"#Challenge_Name_nmo_shoreline_challenge_1"
+		"Description" "#Challenge_Desc_nmo_shoreline_challenge_1"
+		"Objectives"
+		{
+			"0" "754"
+			"1" "58"
+			"2" "389"
+			"3" "173"
+			"4" "104"
+			"5" "478"
+			"6" "418"
+			"7" "419"
+			"9" "329"
+			"10" "59"
+			"11" "985"
+		}
+	}
+
+	"nmo_shoreline_challenge_2"
+	{
+		"Name"	"#Challenge_Name_nmo_shoreline_challenge_2"
+		"Description" "#Challenge_Desc_nmo_shoreline_challenge_2"
+		"Objectives"
+		{
+			"0" "1119"
+			"1" "388"
+			"2" "448"
+			"3" "449"
+			"4" "568"
+			"5" "886"
+			"6" "887"
+			"7" "419"
+			"9" "329"
+			"10" "59"
+			"11" "985"
+		}
+	}
+}

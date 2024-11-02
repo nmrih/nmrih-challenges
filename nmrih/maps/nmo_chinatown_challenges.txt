@@ -9,8 +9,8 @@
 {
 	"nmo_chinatown_challenge_1"
 	{
-		"Name"	"Cutting Corners"
-		"Description" "Make your way through the map using shortcuts."
+		"Name"	"#Challenge_Name_nmo_chinatown_challenge_1"
+		"Description" "#Challenge_Desc_nmo_chinatown_challenge_1"
 		"Objectives"
 		{
 			"0" "29"
@@ -32,8 +32,8 @@
 	
 	"nmo_chinatown_blitz_1"
 	{
-		"Name"	"Blitz: Rush Hour"
-		"Description" "In Blitz mode, gain more time by completing objectives!"
+		"Name"	"#Challenge_Name_nmo_chinatown_blitz_1"
+		"Description" "#Challenge_Desc_nmo_chinatown_blitz_1"
 		"Blitz"	"1"
 		"Objectives"
 		{

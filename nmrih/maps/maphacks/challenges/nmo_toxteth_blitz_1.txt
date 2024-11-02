@@ -5,7 +5,7 @@
 	"includes"
 	{
 		"file" "maps/maphacks/challenges/include/nmo_toxteth_blitz_shared.txt"
-		"file" "maps/maphacks/challenges/include/nmo_toxteth_challenge_1.txt"
+		"file" "maps/maphacks/challenges/nmo_toxteth_challenge_1.txt"
 	}
 
 	"entities"

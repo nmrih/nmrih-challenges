@@ -90,7 +90,7 @@
 	// Use this for stripping out entities before map load or to change classnames
 	// Note that this is completely separate from MapHack's runtime entities field, events can't be triggered, started or stopped here!
 	// !! - Only available function keys are:
-	// $edit, $edit_all, $modify, $remove, $remove_all,
+	// $edit, $edit_all, $modify, $filter, $remove, $remove_all,
 	// $if, $set, $increment, $decrement, $rand
 	"pre_entities"
 	{
@@ -171,6 +171,11 @@
 			{
 				"rendercolor" "0 0 0"
 			}
+		}
+		
+		$filter
+		{
+			"model"	"models/props_junk/watermelon01.mdl"
 		}
 		
 		$remove_all
@@ -394,7 +399,18 @@
 				"modelscale" "4.0"
 			}
 		}
-
+		
+		// Remove entities by matching keyvalues, inspired by Stripper:Source's "filter"
+		// Keys:
+		// <key to match> <value to match>
+		$filter
+		{
+			// Match this model and its model scale, only filters entities sharing these values
+			"model"	"models/props_junk/watermelon01.mdl"
+			"modelscale"	"4.0"
+		}
+		$filter { "model" "models/props_junk/watermelon01.mdl" } // Remove all entities with this model
+		
 		// Get entity origin & angles, assigns it to variables
 		// Keys:
 		// "targetname" - Target an entity by name

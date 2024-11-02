@@ -16,8 +16,8 @@
 {
 	"nmo_junction_challenge_1"
 	{
-		"Name" "Safe Haven No More"
-		"Description" "Make a break for it to escape the city for good."
+		"Name" "#Challenge_Name_nmo_junction_challenge_1"
+		"Description" "#Challenge_Desc_nmo_junction_challenge_1"
 		"Objectives"
 		{
 			"0" "31" // Escape the safe haven

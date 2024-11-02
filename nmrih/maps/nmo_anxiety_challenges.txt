@@ -14,8 +14,8 @@
 {
 	"nmo_anxiety_challenge_1"
 	{
-		"Name" "Exposure Therapy"
-		"Description" "Can you feel your heart beating?"
+		"Name" "#Challenge_Name_nmo_anxiety_challenge_1"
+		"Description" "#Challenge_Desc_nmo_anxiety_challenge_1"
 		"Objectives"
 		{
 			"0" "23" // Cut through the shutter.

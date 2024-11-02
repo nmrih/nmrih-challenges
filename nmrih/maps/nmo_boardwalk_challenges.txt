@@ -13,8 +13,8 @@
 {
 	"nmo_boardwalk_challenge_1"
 	{
-		"Name" "Walk in the Park"
-		"Description" "Enjoy warm sand, free entertainment, and... who am I kidding?"
+		"Name" "#Challenge_Name_nmo_boardwalk_challenge_1"
+		"Description" "#Challenge_Desc_nmo_boardwalk_challenge_1"
 		"Objectives"
 		{
 			"0" "32" // Make Your Way to the Safehouse.

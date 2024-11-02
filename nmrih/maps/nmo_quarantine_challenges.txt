@@ -19,8 +19,8 @@
 {
 	"nmo_quarantine_challenge_1"
 	{
-		"Name" "Containment Loss"
-		"Description" "Oopsies, we made a mess."
+		"Name" "#Challenge_Name_nmo_quarantine_challenge_1"
+		"Description" "#Challenge_Desc_nmo_quarantine_challenge_1"
 		"Objectives"
 		{
 			"0" "33" // Escape the alley.

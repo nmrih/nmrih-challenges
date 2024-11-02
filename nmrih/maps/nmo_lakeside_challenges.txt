@@ -29,8 +29,8 @@
 {
 	"nmo_lakeside_challenge_1"
 	{
-		"Name" "Run of the Mill"
-		"Description" "You won't see this every day."
+		"Name" "#Challenge_Name_nmo_lakeside_challenge_1"
+		"Description" "#Challenge_Desc_nmo_lakeside_challenge_1"
 		"Objectives"
 		{
 			"0" "16" // Leave the Mill
@@ -47,8 +47,8 @@
 
 	"nmo_lakeside_challenge_2"
 	{
-		"Name" "Downtime"
-		"Description" "Can't connect? It's not just you!"
+		"Name" "#Challenge_Name_nmo_lakeside_challenge_2"
+		"Description" "#Challenge_Desc_nmo_lakeside_challenge_2"
 		"Objectives"
 		{
 			"0" "40" // Find key to the back door

@@ -2,8 +2,8 @@ Challenges
 {
 	"nmo_brooklyn_challenge_1"
 	{
-		"Name" "Core Workout"
-		"Description" "This roadblock won't budge on its own..."
+		"Name" "#Challenge_Name_nmo_brooklyn_challenge_1"
+		"Description" "#Challenge_Desc_nmo_brooklyn_challenge_1"
 		"Objectives"
 		{
 			"0" "22" // Use the key to unlock the cell door
@@ -20,8 +20,8 @@ Challenges
 
 	"nmo_brooklyn_challenge_2"
 	{
-		"Name" "Shop and Chop"
-		"Description" "If we want to hit the road, we are gonna need supplies!"
+		"Name" "#Challenge_Name_nmo_brooklyn_challenge_2"
+		"Description" "#Challenge_Desc_nmo_brooklyn_challenge_2"
 		"Objectives"
 		{
 			"0" "22" // Use the key to unlock the cell door

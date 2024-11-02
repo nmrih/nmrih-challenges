@@ -28,8 +28,8 @@
 {
 	"nmo_suzhou_challenge_1"
 	{
-		"Name"	"Bad Hair Day"
-		"Description" "Complete a round with the longest possible objective chain."
+		"Name"	"#Challenge_Name_nmo_suzhou_challenge_1"
+		"Description" "#Challenge_Desc_nmo_suzhou_challenge_1"
 		"Objectives"
 		{
 			"0" "33"
